@@ -36,8 +36,7 @@
 		 age INT,
 		 city VARCHAR(30),
 		 kindaccount VARCHAR(30),
-		 );
-	)") or die(mysql_error());
+		 );") or die(mysql_error());
  	
 	if ($conn)
 		{
