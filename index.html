@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Into This Night</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script id="facebook-jssdk" async="" src="//connect.facebook.net/en_US/all.js"></script>
+	<script type="text/javascript" src="js/jquery.scrollTo.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('a.panel').click(function () {
+                $('a.panel').removeClass('selected');
+                $(this).addClass('selected');
+                current = $(this);
+                $('#wrapper').scrollTo($(this).attr('href'), 800);		
+                return false;
+            });
+            $(window).resize(function () {
+                resizePanel();
+            });
+        });
+    
+        function resizePanel() {
+            width = $(window).width();
+            height = $(window).height();
+            mask_width = width * $('.item').length;
+            $('#debug').html(width  + ' ' + height + ' ' + mask_width);
+            $('#wrapper, .item').css({width: width, height: height});
+            $('#mask').css({width: mask_width, height: height});
+            $('#wrapper').scrollTo($('a.selected').attr('href'), 0);
+        }
+    </script>
+</head>
+<body>
+	<div id="fb-root"></div>
+	<script>
+      // Additional JS functions here
+      window.fbAsyncInit = function() {
+		
+		FB.init({
+          appId      : '565531223459937', // App ID
+          channelUrl : '//www.intothisnight.com/channel.html', // Channel File
+          status     : true, // check login status
+          cookie     : true, // enable cookies to allow the server to access the session
+          xfbml      : true  // parse XFBML
+        });
+    
+        // Additional init code here
+    	//ADD IN START
+		FB.getLoginStatus(function(response) {
+		  if (response.status === 'connected') {
+			//connected
+		  } else if (response.status === 'not_authorized') {
+			// not_authorized
+		  } else {
+			//not_logged_in
+		  }
+		 });
+		//ADD IN END
+		};
+	  
+	  //ADD IN 2 START
+	  function login() {
+		FB.login(function(response) {
+			if (response.authResponse) {
+				// connected
+				testAPI();
+			} else {
+				// cancelled
+			}
+			});
+		}
+     //ADD IN 2 END
+		
+	 //ADD IN 3 START
+	 function testAPI() {
+		console.log('Welcome!  Fetching your information.... ');
+		FB.api('/me', function(response) {
+			console.log('Good to see you, ' + response.name + '.');
+		});
+		}
+	  //ADD IN 3 END
+		
+      // Load the SDK Asynchronously
+      (function(d){
+         var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement('script'); js.id = id; js.async = true;
+         js.src = "//connect.facebook.net/en_US/all.js";
+         ref.parentNode.insertBefore(js, ref);
+       }(document));
+    </script>
+    <!--FACEBOOK LIKE-->
+	<!--<div id="fb-root"></div>-->
+	<script>
+		(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+    	}(document, 'script', 'facebook-jssdk'));
+    </script>
+	<!--HEADER-->
+	<div id="header">
+        <span class="left"><a href="index.html">Guiding you...</a></span>
+        <span class="right" style="position: relative;left: 90px;"><a href="javascript:login();">Connect</a></span>
+        <!--<span class="right"><a class="sm2" href="http://www.facebook.com/pages/Intothisnightcom/506587609387251?fref=ts"><img src="icons/ico_fb_blue.png" alt="facebook"  onmouseover="this.src='icons/ico_fb_grey.png'" onmouseout="this.src='icons/ico_fb_blue.png'"></a></span>-->
+		<span class="right" style="position: relative;left: 20px;"><a href="https://twitter.com/Intothisnight" class="twitter-follow-button" data-show-count="true" data-show-screen-name="false">Follow @intothisnight</a></span>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>        
+        <!--<span class="right"><a class="sm1" href="https://twitter.com/Intothisnight" ><img src="icons/ico_tw_blue.png" alt="twitter" onmouseover="this.src='icons/ico_tw_grey.png'" onmouseout="this.src='icons/ico_tw_blue.png'"></a></span>-->
+        <span class="fb-right"><div class="fb-like" data-href="http://www.facebook.com/pages/Intothisnightcom/506587609387251?fref=ts" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true" data-font="verdana"></div></span>
+        <span class="right"><a href="#item1" class="panel">HOME</a> <!--| <a href="#item2" class="panel">CLUB LIST</a> -->| <a href="#item3" class="panel">ABOUT</a> | <a href="#item4" class="panel">EXPECTATIONS</a></span>
+    </div>
+	<span id="headerexten"></span>
+    <div id="wrapper">
+        <div id="mask">
+        	<!-- MAIN PAGE-->
+            <div id="item1" class="item">
+                <script type="text/javascript">
+
+				  var _gaq = _gaq || [];
+				  _gaq.push(['_setAccount', 'UA-38547756-1']);
+				  _gaq.push(['_trackPageview']);
+				
+				  (function() {
+					var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+					ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				  })();
+				
+				</script>
+                <!DOCTYPE html>
+                    <head>
+                        <title>Into This Night</title>
+                        <link rel="stylesheet" href="stylesheets/default.css" type="text/css">
+                    </head>
+                    <body>
+                    <div id="entire">
+                        <div id="logo">
+                           	&emsp;&emsp;&emsp; INTO THIS NIGHT!
+                        </div>
+                        <div id="city">
+                            	<form action="">
+                                    <select name="city">
+                                      <option value="vegas">Las Vegas</option>
+                                      <option value="sf">San Fran</option>
+                                      <option value="nyc">New York</option>
+                                      <option value="audi">Miami</option>
+                                    </select>
+                              	</form>
+                        </div>
+                        <!--<div id="footer">
+                            <span class="left" style="margin-left: 150px; "><a href="index.html">LOGO</a></span>
+                            <span class="left"> &copy; Into This Night 2013. All Rights Reserved.</span>
+                            <span class="right" style="margin-right: 150px;"><a href="#"><img src="icons/ico_tw_blue.png" alt="twitter"></a></span>
+                            <span class="right"><a href="#"><img src="icons/ico_fb_blue.png" alt="facebook"></a></span>
+                            <span class="right"><a href="#">Admin Login</a></span>
+                        </div>-->
+                        <span id="terms">&copy Into This Night 2013. <a href="#item5" class="panel">Terms of Use.</a></span>
+                    </div>	
+                    </body>
+                </html>
+            </div>
+            <!--END MAIN PAGE-->
+            
+            <!-- CLUBLIST PAGE-->
+            <div id="item2" class="item">
+            </div>
+            <!--END CLUBLIST PAGE-->
+            
+            <!-- ABOUT PAGE-->
+            <div id="item3" class="item" style="background: white;">
+            	<div id="story">
+   				&emsp;&emsp;So, first here is a story: when we went to Las Vegas we had to go through 4 different websites to find what were the events, DJs, special parties for any given day. It was impossible to find this information, crucial to us, in one comprehensive and single place. In short, bouncing between many sites and trying to research what was going on that night, became very frustrating and took time away from us attending some great events.
+                <br><br>
+                So, we decided to create Intothisnight.com!
+                </div>
+                <div id="profile_pic">
+					<span><img src="images/david.jpg" style="width: 200px; height: 200px;" alt="david"></span>
+					<span>hello</span>
+					<span>hello</span>
+					<span>hello</span>
+                </div>
+                <div id="profile_text">
+                	<span>David is Canadian & Peruvian and has a BS in Industrial Engineering from Texas A&M and a MEng of Operations Research from UC Berkeley. He has experiences coding professional websites and love dance music!</span>
+                	<span>Felix is French and has a double diploma from two MSc in computer science Engineering from Telecom School and from Milano University. He spent his free time building applications to earn money and know by heart the places to be in Paris.</span>
+                    <span>Antoine is French and has two MSc : one in Industrial Engineering from Arts et Metiers ParisTech and one in Aerospace Engineering from USC. He lives in LA, the city of the starts and where entertainment is a religion that he assiduously practices.</span>
+                    <span>Jeremy is French and has two master degress : one MSc in Industrial Engineering from Arts et Metiers ParisTech and one MEng from UC Berkeley. He had great experience clubbing and committed to test all the clubs worldwide.</span>
+                </div>
+            </div>
+    		<!--END ABOUT PAGE-->
+    
+    		<!--EXPECTATIONS PAGE-->
+            <div id="item4" class="item" style="background: black;">
+            	<span id="skyline">
+                	<img src="images/skyline.gif" alt="skyline">
+                </span>
+				<div id="feedback">
+                	<p style="font-size: 22px;">We would love to hear from you!</p>
+                    <form id="feedbackfrm" action="send.php" method="POST">
+                        Your name: <br>
+                        <input id="name" name="name" type="text"><br>
+                        <br>
+                        Your email: <br>
+                        <input id="email" type="text" name="email"><br>
+                        <br>
+                        Your comments: <br>
+                        <textarea id="message" name="message" rows="10" cols="35"></textarea><br><br>
+                        <input id="frmsubmit" type="submit" value="Submit">
+                        <iframe id="upload_target" name="upload_target" src="" style="width: 200px; right: 20px; height: 55px;z-index:10; color: white;"></iframe>
+                    </form>
+                    <script>
+						function init() {
+							document.getElementById('feedbackfrm').onsubmit=function() {
+								document.getElementById('feedbackfrm').target = 'upload_target';
+							};
+						};
+               			window.onload=init;
+					</script>
+             	</div>
+            </div>
+            <!--END EXPECTATIONS PAGE-->
+            
+            <div id="item5" class="item" style="background: white;">
+            	<div id="termstext">
+                    <h1> Terms of Use</h1>
+                    <p>
+                        Welcome to our website. If you continue to browse and use this website you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern Intothisnight.com’s relationship with you in relation to this website. The term ‘Intothisnight.com’ or ‘us’ or ‘we’ refers to the owner of the website. The term ‘you’ refers to the user or viewer of our website. The use of this website is subject to the following terms of use:
+                        <br><br>
+                        ▪	The content of the pages of this website is for your general information and use only. It is subject to change without notice.
+                        <br>
+                        ▪	Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness or suitability of the information and materials found or offered on this website for any particular purpose. You acknowledge that such information and materials may contain inaccuracies or errors and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.
+                        <br>
+                        ▪	Your use of any information or materials on this website is entirely at your own risk, for which we shall not be liable. It shall be your own responsibility to ensure that any products, services or information available through this website meet your specific requirements.
+                        <br>
+                        ▪	This website contains material which is owned by or licensed to us. This material includes, but is not limited to, the design, layout, look, appearance and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.
+                        <br>
+                        ▪	All trade marks reproduced in this website which are not the property of, or licensed to, the operator are acknowledged on the website.
+                        <br>
+                        ▪	Unauthorized use of this website may give rise to a claim for damages and/or be a criminal offence.
+                        <br>
+                        ▪	From time to time this website may also include links to other websites. These links are provided for your convenience to provide further information. They do not signify that we endorse the website(s). We have no responsibility for the content of the linked website(s).
+                        <br>
+                        ▪	You may not create a link to this website from another website or document without Intothisnight.com’s prior written consent.
+                        <br><br>
+                        Your use of this website and any dispute arising out of such use of the website is subject to the laws of the United States of America.
+                    </p>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</body>
+</html>

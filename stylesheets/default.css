@@ -1,0 +1,410 @@
+/*TABLE OF CONTENTS
+
+	DEFAULT
+	entire
+	header
+		header span a
+		headerexten
+		.left
+		.right
+		.fb-right
+		.sm1 img
+		.sm2 img
+	logo
+	footer
+	body
+	wrapper
+		mask
+		.item
+		.content
+		.selected
+		.clear
+		.panel:hover
+		
+	HOME
+	city
+		city:hover
+		city span a
+		city span a: hover
+		
+	FEEDBACK
+		feedback
+		skyline img
+		frmsubmit
+	
+		
+*/
+
+#entire{
+	position: absolute;
+	width: 101%;
+	height: 101%;
+	top: -1%;
+	left: -1%;
+	overflow: hidden;
+	
+	padding: 0;
+	margin: 0;
+	
+	background-image:url(background.gif);
+	background-size:100% 100%;
+	background-position:bottom;
+	background-repeat:no-repeat;
+}
+#header{
+	position: relative;
+	height: 45px;
+	width: 1100px;
+	top: 50px;
+
+	margin-left: auto;
+	margin-right: auto;
+	
+	opacity: 1;
+	
+	font-family:"Century Gothic";
+	font-size:18px;
+	z-index: 10;
+}
+	#header span a{
+	text-decoration:none;
+	color:#F60;
+	}
+	#headerexten{
+		position: absolute;
+		height: 45px;
+		width: 100%;
+		top: 50px;
+	
+		margin-left: auto;
+		margin-right: auto;
+		
+		opacity: 0.3;
+		background:#ccc;
+		
+		font-family:"Century Gothic";
+		z-index: 5;
+	}
+	.left{
+		float: left;
+		margin-top: 2px;
+		margin-left: 0px;
+		font-size: 24px;
+	}
+	.right{
+		float: right;
+		margin-top: 8px;
+		margin-right: 20px;
+	}
+	.fb-right{
+		position: absolute;
+		margin-top: 8px;
+		left: 1000px;
+	}
+	.sm1 img{
+		margin-top: -3px;
+		height: 25px;
+		width: 31px;
+	}
+	.sm2 img{
+		margin-top: -6px;
+		height: 29px;
+		width: 12px;
+	}
+#logo{
+	position: relative;
+	height: 80px;
+	width: 500px;
+	top: 75px;
+
+	margin-top: 50px;
+	margin-left: 200px;
+	margin-bottom: 50px;
+
+	font-family:"Century Gothic";
+	color: #999;
+	font-size:36px;
+}
+#footer{
+	position: relative;
+	height: 45px;
+	width: 100%;
+	top: 25px;
+	
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	
+	opacity: 0.5;
+	background: white;
+	
+	font-size:9px;
+}
+body {
+	height:100%;
+	width:100%;
+	margin:0;padding:0;
+	overflow:hidden;
+}
+
+#wrapper {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;left:0;
+	background-color:#ccc;
+	overflow:hidden;
+}
+
+	#mask {
+		width:500%;
+		height:100%;
+		background-color:#eee;
+	}
+
+	.item {
+		width:20%;
+		height:100%;
+		float:left;
+		background-color: black;
+	}
+	
+	
+	.content {
+		width:400px;
+		height:300px;
+		top:20%;
+		margin:0 auto;
+		position:relative;
+	}
+	
+	.selected{
+		font-weight: bold;
+	}
+
+	.clear {
+		clear:both;
+	}
+
+	.panel:hover{
+		font-weight: bold;
+	}
+	
+/*HOME*/
+#city{
+	position: relative;
+	height: auto;
+	top: 350px;
+
+	margin-top: 50px;
+	left: 800px;
+	margin-bottom: 75px;
+
+	opacity: 0.6;
+}
+select {
+	border: 1px solid #F60;
+    width:165px;
+    -webkit-appearance: none;
+	
+	font-family: "Century Gothic";
+	color: #F60;
+	text-decoration: none;
+	font-size: 24px;
+	padding: 10px;
+	
+	opacity: 1;
+	background: #ccc url(../icons/arrow.png) no-repeat;
+	background-size: 25px 25px;
+	background-position: right;
+}
+
+/*ABOUT*/
+#story{
+	position: relative;
+	width: 900px;
+	height: 130px;
+	
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 120px;
+	
+	font-family: "Century Gothic";
+	color: #999;
+	text-decoration: none;
+	font-size: 16px;
+	padding: 0;
+}
+#profile_pic{
+	position: relative;
+	width: 1100px;
+	height: 200px;
+	
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	
+	border: 1px solid red;
+}
+#profile_pic span{
+	position: relative;
+	display:inline-block;
+	width: 233px;
+	height: 180px;
+	
+	margin-right: 20px;
+	margin-top: 0px;
+	
+	float: left;
+	padding: 10px;
+	bottom: 0;
+	
+	font-family: "Century Gothic";
+	color: #999;
+	text-decoration: none;
+	font-size: 14px;
+	
+	border: 1px solid blue;
+}
+#profile_text{
+	position: relative;
+	width: 1100px;
+	height: 160px;
+	
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	
+	border: 1px solid red;
+}
+#profile_text span{
+	position: relative;
+	display:inline-block;
+	width: 255px;
+	height: auto;
+	
+	margin-top: 0px;
+	
+	float: left;
+	padding: 10px;
+	bottom: 0;
+	
+	font-family: "Century Gothic";
+	color: #999;
+	text-decoration: none;
+	font-size: 14px;
+	
+	opacity: 0.6;
+}
+	
+/*EXPECTATIONS*/
+#feedback{
+	position: relative;
+	float: right;
+	top: 120px;
+	right: 250px;
+	
+	font-family: "Century Gothic";
+	color: #F60;
+	text-decoration: none;
+	font-size: 16px;
+	padding: 0;
+	margin: 0;	
+}
+#skyline img{
+	position: relative;
+	top: 120px;
+	margin-left: 250px;
+	width: 420px;
+	height: auto;	
+	z-index: 1;
+}
+#frmsubmit{
+	line-height: 1;
+    text-decoration:none;
+    display: inline-block;
+    padding: 8px 12px;
+    font-family: Arial, sans-serif;
+    text-transform:uppercase;
+    font-size:14px;
+    letter-spacing:1px;
+    color:#F60;
+    cursor:pointer;
+}
+#upload_target{
+	position: absolute;
+	width:150px; 
+	height:45px; 
+	
+	border:0; 
+	overflow-x:hidden;
+	overflow-y:hidden;
+}
+
+/*TERMS*/
+#terms{
+	position: absolute;
+	left: 3%;
+	top: 93%;
+	
+	font-size:12px;
+	font-weight: 100;
+	font-family: "Century Gothic";
+	color: white;	
+}
+#terms a{
+	position: relative;
+	font-family: "Century Gothic";
+
+	font-size:12px;
+	text-decoration:none
+	text-decoration: underline;
+	color: white;
+}
+#terms a:hover{
+	text-decoration: none;
+}
+#termstext{
+	position: relative;
+	width: 800px;
+	height: 500px;
+	top: 100px;
+	padding: 20px;
+	
+	margin-left: auto;
+	margin-right: auto;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	
+	font-size:12px;
+	font-weight: 100;
+	font-family: "Century Gothic";
+	color: #999;
+}
+	::-webkit-scrollbar {
+		width: 15px;
+		
+		z-index: 4;
+	}
+	::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); 
+		-webkit-border-radius: 7px;
+		-moz-border-radius: 7px;
+		-o-border-radius: 7px;
+		-ms-border-radius: 7px;
+		-khtml-border-radius: 7px;
+		border-radius: 7px;
+		
+		z-index: 4;
+	}
+	::-webkit-scrollbar-thumb {
+		-webkit-border-radius: 7px;
+		-moz-border-radius: 7px;
+		-o-border-radius: 7px;
+		-ms-border-radius: 7px;
+		-khtml-border-radius: 7px;
+		border-radius: 7px;
+		-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.5); 
+
+		z-index: 4;
+	}
