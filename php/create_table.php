@@ -42,7 +42,7 @@
 		CREATE TABLE user_connection (
 			id_connection VARCHAR(30) NOT NULL,
 			id_user int NOT NULL,
-			PRIMARY KEY(id_connection)
+			PRIMARY KEY(id_user,id_connection)
 		 )") or $error=$error . "<br>" . mysql_error();
 	
 	//4.Create club table
@@ -101,12 +101,41 @@
 		CREATE TABLE party_dj(
 			id_party VARCHAR(30) NOT NULL,
 			id_dj INT NOT NULL,
-			PRIMARY KEY (id_party)
+			PRIMARY KEY (id_party, id_dj)
 		)") or die($error=$error . "<br>" . mysql_error() . "<br><br><a href='main.php'>home</a>");
-				
-	/*NEXT TABLE CREATION*/
 	
-	echo ($query/9)*100 . "% ";
+	//10.create drink table
+	$query=$query+mysql_query("
+		CREATE TABLE drink(
+			id_drink INT NOT NULL AUTO_INCREMENT,
+			PRIMARY KEY(id_drink),
+			name VARCHAR(30),
+			description LONG,
+			price FLOAT
+		)") or die($error=$error . "<br>" . mysql_error() . "<br><br><a href='main.php'>home</a>");
+	
+	//11.create price table
+	$query=$query+mysql_query("
+		CREATE TABLE price(
+			id_price INT NOT NULL AUTO_INCREMENT,
+			PRIMARY KEY(id_price),
+			name VARCHAR(30),
+			price FLOAT
+		)") or die($error=$error . "<br>" . mysql_error() . "<br><br><a href='main.php'>home</a>");
+	
+	//12.create host table
+	$query=$query+mysql_query("
+		CREATE TABLE host(
+			id_club INT,
+			id_drink INT,
+			id_price INT,
+			id_party VARCHAR(30),
+			opening TIME,
+			closing TIME,
+			PRIMARY KEY (id_club,id_drink,id_price,id_party)
+		)") or die($error=$error . "<br>" . mysql_error() . "<br><br><a href='main.php'>home</a>");
+	
+	echo ($query/12)*100 . "% ";
 	echo "Complete.";
 	
 	echo "<br><br><a href='main.php'>home</a>";
