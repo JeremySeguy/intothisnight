@@ -12,28 +12,20 @@
 	$num_rows = mysql_num_rows($result);
 	for ($i = 0; $i < $num_rows; $i++) {
 		echo "<br>Table: ", mysql_tablename($result, $i), "<br>";
+		echo "&emsp;&emsp;&emsp;Fields: ";
+		
+		$tname = mysql_tablename($result, $i);
+		$res=mysql_query("SELECT * FROM $tname"); 
+		$num_fields = mysql_num_fields($res);
+
+		for ($j=0; $j < $num_fields; $j++){ 
+			echo mysql_field_name($res, $j) . ", "; 
+		}		
+		echo "<br>";
 	}
-	
-	mysql_free_result($result);
 	
 	echo "<br>";
 
-	$result = mysql_query("SELECT COLUMNS FROM clubber");
-
-	while($row = mysql_fetch_array($result))
-	  {
-	  echo $row;
-	  echo ".<br />";
-	  }
-	
-	$result = mysql_query("SELECT * FROM clubber");
-
-	while($row = mysql_fetch_array($result))
-	  {
-	  echo $row;
-	  echo "<br />";
-	  }
-	
 	echo "<br><a href='main.php'>home</a>";
 
 	mysql_close($conn);
