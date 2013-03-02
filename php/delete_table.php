@@ -1,22 +1,40 @@
 <?php
-	session_start();
+	/*session_start();
 	
 	if(!session_is_registered(email)){
 		header("location:index.php");
-	}
+	}*/
 	
 	require "config.php";
 	
-	$sql=mysql_query("DROP TABLE $table", $conn);
-	
-	if(!$sql)
-	{
-	  die('Could not delete table: ' . mysql_error() . '<br><br><a href="index.html">home</a>');
+	/* query all tables */
+	$sql = "SHOW TABLES FROM $db";
+	if($result = mysql_query($sql)){
+	  /* add table name to array */
+	  while($row = mysql_fetch_row($result)){
+		$found_tables[]=$row[0];
+	  }
 	}
-
-	echo "Table deleted.";
+	else{
+	  die("Error, could not list tables. MySQL Error: " . mysql_error());
+	}
 	
-	echo "<br><br><a href='main.php'>home</a>";
+	if(empty($found_tables)){
+		die("No tables found<br><br><a href='main.php'>home</a>");
+	}
+	  
+	/* loop through and drop each table */
+	foreach($found_tables as $table_name){
+	  $sql = "DROP TABLE $table_name";
+	  if($result = mysql_query($sql)){
+		echo "Success - table $table_name deleted. <br>";
+	  }
+	  else{
+		echo "Error deleting $table_name. MySQL Error: " . mysql_error() . "<br>";
+	  }
+	}
+		
+	echo "<br><a href='main.php'>home</a>";
 	
 	mysql_close($conn);
 ?>

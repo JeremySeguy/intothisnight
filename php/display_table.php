@@ -1,9 +1,9 @@
 <?php
-	session_start();
+	/*session_start();
 	
 	if(!session_is_registered(email)){
 		header("location:index.php");
-	}
+	}*/
 
 	require "config.php";
 	
@@ -18,19 +18,19 @@
 	
 	echo "<br>";
 
-	$result = mysql_query("SELECT COLUMNS FROM $table");
+	$result = mysql_query("SELECT COLUMNS FROM clubber");
 
 	while($row = mysql_fetch_array($result))
 	  {
 	  echo $row;
-	  echo "<br />";
+	  echo ".<br />";
 	  }
 	
-	$result = mysql_query("SELECT * FROM $table");
+	$result = mysql_query("SELECT * FROM clubber");
 
 	while($row = mysql_fetch_array($result))
 	  {
-	  echo $row['personID'] . " " . $row['email'] . " " . $row['type'] . " " . $row['zip'] . " " . $row['what'];
+	  echo $row;
 	  echo "<br />";
 	  }
 	

@@ -1,27 +1,13 @@
 <?php
 	//DB connection info data
 	//hosted on Namecheap.com through 3dprintsexpress.com
-	$host = "localhost";
-	$user = "cdprumeo_intothisnight";
+	$hosting = "localhost";
+	$user = "cdprumeo_itn";
 	$pass = "bonnesalope10";
 	$db = "cdprumeo_intothisnight";
 
-	//DB Tables
-	$clubber = "clubber";
-	$administrator = "administrator";
-	$dj = "dj";
-	$club = "administrator";
-	$party = "party";
-	$webconnection = "webconnection";
-	$price = "price";
-	$drink = "drink";
-	$host = "host";
-	$do = "do";
-	$book = "book";
-	$play = "play";
-
 	//Connect to DB
-	$conn = mysql_connect($host, $user, $pass);
+	$conn = mysql_connect($hosting, $user, $pass);
 	
 	/*if ($conn)
 		{
