@@ -196,7 +196,6 @@ a:hover, a.selected{
     min-width: 700px; /*temp*/
     left: 0;
     right: 0;
-    background: transparent url(../img/pattern.png) repeat;
 }
 
 #overlay{
