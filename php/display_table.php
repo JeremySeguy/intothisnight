@@ -22,6 +22,17 @@
 			echo mysql_field_name($res, $j) . ", "; 
 		}		
 		echo "<br>";
+		
+		if ($tname == "signup"){
+			$result2 = mysql_query("SELECT * FROM $tname");
+			while($row = mysql_fetch_array($result2)){
+				echo "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ";
+			  	echo $row['id_user'] . ",&emsp;&emsp;" . $row['email'];
+			  	echo "<br />";
+		  	}
+		}
+		
+		echo "<br>";
 	}
 	
 	echo "<br>";

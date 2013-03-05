@@ -102,7 +102,7 @@
 			id_party VARCHAR(30) NOT NULL,
 			id_dj INT NOT NULL,
 			PRIMARY KEY (id_party, id_dj)
-		)") or die($error=$error . "<br>" . mysql_error() . "<br><br><a href='main.php'>home</a>");
+		)") or die($error=$error . "<br>" . mysql_error());
 	
 	//10.create drink table
 	$query=$query+mysql_query("
@@ -112,7 +112,7 @@
 			name VARCHAR(30),
 			description LONG,
 			price FLOAT
-		)") or die($error=$error . "<br>" . mysql_error() . "<br><br><a href='main.php'>home</a>");
+		)") or die($error=$error . "<br>" . mysql_error());
 	
 	//11.create price table
 	$query=$query+mysql_query("
@@ -121,7 +121,7 @@
 			PRIMARY KEY(id_price),
 			name VARCHAR(30),
 			price FLOAT
-		)") or die($error=$error . "<br>" . mysql_error() . "<br><br><a href='main.php'>home</a>");
+		)") or die($error=$error . "<br>" . mysql_error());
 	
 	//12.create host table
 	$query=$query+mysql_query("
@@ -133,9 +133,17 @@
 			opening TIME,
 			closing TIME,
 			PRIMARY KEY (id_club,id_drink,id_price,id_party)
+		)") or die($error=$error . "<br>" . mysql_error());
+	
+	//12.create host table
+	$query=$query+mysql_query("
+		CREATE TABLE signup(
+			id_user int NOT NULL AUTO_INCREMENT,
+			PRIMARY KEY(id_user),
+			email VARCHAR(45)
 		)") or die($error=$error . "<br>" . mysql_error() . "<br><br><a href='main.php'>home</a>");
 	
-	echo ($query/12)*100 . "% ";
+	echo ($query/13)*100 . "% ";
 	echo "Complete.";
 	
 	echo "<br><br><a href='main.php'>home</a>";
