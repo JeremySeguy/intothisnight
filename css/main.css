@@ -146,14 +146,14 @@ a:hover, a.selected{
     width: 960px;
     padding: 0 10px;
     max-width: 100%;
-    min-width: 700px; /*temp*/
+    /*min-width: 700px; temp*/
     margin: auto;
 }
 
 #header{
     display: block;
     width: 100%;
-    min-width: 700px; /*temp*/
+    /*min-width: 700px; /*temp*/
     height: 80px;
     position: relative;
 
@@ -193,7 +193,7 @@ a:hover, a.selected{
     position: absolute;
     top: 80px;
     bottom: 40px;
-    min-width: 700px; /*temp*/
+    /*min-width: 700px; /*temp*/
     left: 0;
     right: 0;
 }
@@ -258,7 +258,7 @@ a:hover, a.selected{
     position: absolute;
     bottom: 0;
     left: 0;
-    min-width: 700px; /*temp*/
+    /*min-width: 700px; /*temp*/
 
     -webkit-box-shadow: 0 -2px 5px -1px rgba(0,0,0,.4);
     -moz-box-shadow: 0 -2px 5px -1px rgba(0,0,0,.4);
