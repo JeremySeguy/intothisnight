@@ -13,7 +13,7 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 		<link rel="icon" type="image/png" href="img/favicon.png">
         
-        <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,300italic' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
 
@@ -37,98 +37,101 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-
-        <header id="header">
-            <div class="container clearfix">
-                <div id="logo">
-                    <a class="logo" href="index.html"><img style="position: absolute; top: 7px; height: 64px;" src="img/itnlogo.png" alt="Into This Night &copy;"></a>
+        <div id="wrapper">
+            <header id="header">
+                <div class="container clearfix">
+                    <div id="logo">
+                        <a class="logo" href="index.html"><img style="position: absolute; top: 7px; height: 64px;" src="img/itnlogo.png" alt="Into This Night &copy;"></a>
+                    </div>
+                    <nav id="menu">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="expectations.html">Expectations</a></li>
+                            <li>
+                                <a href="http://www.facebook.com/pages/Intothisnightcom/506587609387251?fref=ts" target="_blank">
+                                    <img src="img/social/facebook.png" alt="Facebook">
+                            	</a>
+                                &emsp;&emsp;
+                                <a href="https://twitter.com/Intothisnight" target="_blank">
+                                    <img src="img/social/twitter.png" alt="Facebook">
+                            	</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-                <nav id="menu">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="expectations.html">Expectations</a></li>
-                        <a href="http://www.facebook.com/pages/Intothisnightcom/506587609387251?fref=ts" target="_blank">
-                        <img src="img/social/facebook.png" alt="Facebook">
-                    	</a>
-                        &emsp;&emsp;
+            </header>
+            <article id="main">
+                <div id="content">
+                    <h1><strong>Plan</strong> and <strong>share</strong> your <strong>parties</strong> with <strong>friends</strong>.</h1>
+                    <span class="subtitle">Subscribe to our newsletter for early access with your email :</span>
+                    <form id="signup" action="php/signup.php" method="post">
+                    	<input id="email" name="email" placeholder="email">
+                        <input id="submit" class="button black-button" type="submit" value="subscribe">
+                    </form>
+                    <hr/>
+                    <span class="subtitle">You can already like & follow us :</span>
+                    <div class="social">
+                  		<span>
+                       <!--
+                        <a href="http://www.facebook.com/pages/Intothisnightcom/565531223459937?fref=ts" target="_blank">
+                            <img src="img/social/facebook.png" alt="Facebook">
+                        </a>
+                        &emsp;
+                        <div class="fb-like" data-href="http://www.facebook.com/pages/Intothisnightcom/506587609387251" data-send="false" data-layout="box_count" data-width="250" data-show-faces="false" data-font="verdana"></div>
+                        &emsp;<span style="position: relative; color: white; font-size:36px; font-weight:bolder; top:7px;">&middot;</span>&emsp;
                         <a href="https://twitter.com/Intothisnight" target="_blank">
-                        <img src="img/social/twitter.png" alt="Facebook">
-                    	</a>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <article id="main">
-            <div id="content">
-                <h1>Plan and share your parties with friends.</h1>
-                <span class="subtitle">signup for early access with your email :</span>
-                <form style="padding: 10px; font-family: 'SocialGlyphs';" id="signup" action="php/signup.php" method="post">
-                	<input style="width: 200px; height: 35px; padding: 4px; color: #999;" id="email" name="email" placeholder="email">
-                    <input class="button-link" type="submit" value="signup">
-                </form>
-                <br>
-                <span class="subtitle">You can already like & follow us :</span>
-                <div class="social">
-              		<span>
-                   <!--
-                    <a href="http://www.facebook.com/pages/Intothisnightcom/565531223459937?fref=ts" target="_blank">
-                        <img src="img/social/facebook.png" alt="Facebook">
-                    </a>
-                    &emsp;
-                    <div class="fb-like" data-href="http://www.facebook.com/pages/Intothisnightcom/506587609387251" data-send="false" data-layout="box_count" data-width="250" data-show-faces="false" data-font="verdana"></div>
-                    &emsp;<span style="position: relative; color: white; font-size:36px; font-weight:bolder; top:7px;">&middot;</span>&emsp;
-                    <a href="https://twitter.com/Intothisnight" target="_blank">
-                        <img src="img/social/twitter.png" alt="Facebook">
-                    </a>
-                    &emsp;
-                    <div class="twitter_box" style="display:inline-block"><span id="followers"></span></div>
-					<span style="position:relative; top:5px;"><a href="https://twitter.com/intothisnight" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false"></a></span>
-					-->
-                    &emsp;&emsp;
-                   	<span><div class="fb-like" data-href="http://www.facebook.com/pages/Intothisnightcom/506587609387251" data-send="false" data-layout="button_count" data-width="250" data-show-faces="false" data-font="verdana"></div></span>
-					&emsp;<span style="position: relative; color: white; font-size:18px; font-weight:bolder; top:2px;">&middot;</span>&emsp;
-                    <span style="position:relative; top:5px;"><a href="https://twitter.com/intothisnight" class="twitter-follow-button" data-show-count="true" data-show-screen-name="false"></a></span>
-					<script>
-						!function(d,s,id){
-							var js,fjs=d.getElementsByTagName(s)[0];
-							if(!d.getElementById(id)){js=d.createElement(s);
-								js.id=id;js.src="//platform.twitter.com/widgets.js";
-								fjs.parentNode.insertBefore(js,fjs);
-						}}(document,"script","twitter-wjs");
+                            <img src="img/social/twitter.png" alt="Facebook">
+                        </a>
+                        &emsp;
+                        <div class="twitter_box" style="display:inline-block"><span id="followers"></span></div>
+    					<span style="position:relative; top:5px;"><a href="https://twitter.com/intothisnight" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false"></a></span>
+    					-->
+                        &emsp;&emsp;
+                       	<span><div class="fb-like" data-href="http://www.facebook.com/pages/Intothisnightcom/506587609387251" data-send="false" data-layout="button_count" data-width="250" data-show-faces="false" data-font="verdana"></div></span>
+    					&emsp;<span style="position: relative; color: white; font-size:18px; font-weight:bolder; top:2px;">&middot;</span>&emsp;
+                        <span style="position:relative; top:5px;"><a href="https://twitter.com/intothisnight" class="twitter-follow-button" data-show-count="true" data-show-screen-name="false"></a></span>
+    					<script>
+    						!function(d,s,id){
+    							var js,fjs=d.getElementsByTagName(s)[0];
+    							if(!d.getElementById(id)){js=d.createElement(s);
+    								js.id=id;js.src="//platform.twitter.com/widgets.js";
+    								fjs.parentNode.insertBefore(js,fjs);
+    						}}(document,"script","twitter-wjs");
 
-						$(function() {
-							function m(n, d) {
-								P = Math.pow;
-								R = Math.round
-								d = P(10, d);
-								i = 7;
-								while(i) {
-									(s = P(10, i-- * 3)) <= n && (n = R(n * d / s) / d + "KMGTPE"[i])
-								}
-								return n;
-							}
-						
-							$.ajax({
-								url: 'http://api.twitter.com/1/users/show.json',
-								data: {
-									screen_name: 'intothisnight'
-								},
-								dataType: 'jsonp',
-								success: function(data) {
-								   count = data.followers_count;
-								   $('#followers').html(m(count, 1));
-								}
-							});
-						});
-					</script>
+    						$(function() {
+    							function m(n, d) {
+    								P = Math.pow;
+    								R = Math.round
+    								d = P(10, d);
+    								i = 7;
+    								while(i) {
+    									(s = P(10, i-- * 3)) <= n && (n = R(n * d / s) / d + "KMGTPE"[i])
+    								}
+    								return n;
+    							}
+    						
+    							$.ajax({
+    								url: 'http://api.twitter.com/1/users/show.json',
+    								data: {
+    									screen_name: 'intothisnight'
+    								},
+    								dataType: 'jsonp',
+    								success: function(data) {
+    								   count = data.followers_count;
+    								   $('#followers').html(m(count, 1));
+    								}
+    							});
+    						});
+    					</script>
+                    </div>
                 </div>
-            </div>
-        </article>
+            </article>
    
 
-        <footer id="footer">
+            <footer id="footer">
 
-        </footer>
+            </footer>
+        </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
