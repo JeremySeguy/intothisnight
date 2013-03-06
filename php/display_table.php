@@ -27,7 +27,7 @@
 			$result2 = mysql_query("SELECT * FROM $tname");
 			while($row = mysql_fetch_array($result2)){
 				echo "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ";
-			  	echo $row['id_user'] . ",&emsp;&emsp;" . $row['email'];
+			  	echo $row['id_user'] . ",&emsp;&emsp;" . $row['email'] . ",&emsp;&emsp;" . $row['date'];
 			  	echo "<br />";
 		  	}
 		}

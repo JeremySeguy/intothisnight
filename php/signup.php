@@ -1,22 +1,32 @@
 <?php
 	require "config.php";
 	
+	$date = date('Y-M-j');
 	$email = $_POST['email'];
 	$email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
 	
+	//checking for empty email field
 	if($email=='') {
 		echo "Error! Email field is empty.";	
 		exit;
 	}
 	
+	//checking for valid email
 	if(!preg_match($email_exp,$email)) {
 		echo "Error! Please enter a valid email.";	
 		exit;
 	}
 	
-	$sql="INSERT INTO signup (email)
-		VALUES
-	('$_POST[email]')";
+	//check for existing email
+	$sqlc = "SELECT * FROM signup WHERE email='" . $email;
+	$result = mysql_query($sqlc);	
+	if (!$result) {
+		echo "Error! You are already signed up.";
+		exit;
+		}
+				
+	
+	$sql="INSERT INTO signup (email, date) VALUES ('$_POST[email]', '$date')";
 	
 	if (!mysql_query($sql))
 	{

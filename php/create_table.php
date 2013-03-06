@@ -140,7 +140,8 @@
 		CREATE TABLE signup(
 			id_user int NOT NULL AUTO_INCREMENT,
 			PRIMARY KEY(id_user),
-			email VARCHAR(45)
+			email VARCHAR(45),
+			date VARCHAR(45)
 		)") or die($error=$error . "<br>" . mysql_error() . "<br><br><a href='main.php'>home</a>");
 	
 	echo ($query/13)*100 . "% ";
