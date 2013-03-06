@@ -62,17 +62,17 @@
             <span id="skyline">
                 <img src="img/skyline.jpg" alt="skyline">
             </span>
-            <div id="feedback">
-            	<span style="position: relative; display: inline-block; width: 630px;">
+            <div id="feedback" style="float: right;">
+            	<span style="position: relative; display: inline-block; width:550px ;float: right;">
                 	<p style="font-size: 16px;">&emsp;&emsp;Imagine you are new to say... NYC, do you really want to waste your time searching from site to site what to do at night? Want to avoid disappointments? Want to get exclusive deals? Want to catch up with friends? </p>
                     <p style="font-size: 16px;">&emsp;&emsp;Then, Into This Night is for you, a one stop for all nightlife information in major US cities, where you can plan and share your parties with friends, purchase event tickets, and even receive special promotions. </p>
                     <p style="font-size: 22px;">We would love to hear from you!</p>
                 </span>
                 <form id="feedbackfrm" action="php/send.php" method="POST">
-                    Your name: <input id="name" name="name" type="text" style="width:130px;">
-                    &emsp;&emsp;Your email: <input id="email" type="text" name="email" style="width:225px;"><br><br>
-                    Your comments: <br><br>
-                    <textarea id="message" name="message" rows="4" cols="79" style="resize:none;"></textarea><br><br>
+                    <span>Name: </span><input id="name" name="name" type="text" style="width:100px;">
+                    &emsp;&emsp;Email: <input id="email" type="text" name="email" style="width:200px;"><br><br>
+                    Comments: <br><br>
+                    <textarea id="message" name="message" rows="3" cols="70" style="resize:none;"></textarea><br><br>
                     <input id="frmsubmit" type="submit" value="Submit">
                     <iframe id="upload_target" name="upload_target" src="" style="width: 200px; right: 320px; height: 55px;z-index:10; color: white;"></iframe>
                 </form>

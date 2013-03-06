@@ -590,9 +590,9 @@ a:hover, a.selected{
 }
 #skyline img{
 	position: relative;
-	top: 15px;
+	top: 45px;
 	margin-left: 150px;
-	width: 420px;
+	width: 360px;
 	height: auto;	
 	z-index: 1;
 }
