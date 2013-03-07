@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,300italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+    	<div id="fb-root"></div>
+			<script>(function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=565531223459937";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+
+        <header id="header">
+            <div class="container clearfix">
+                <div id="logo">
+                    <a class="logo" href="index.html">Into This Night &#169;</a>
+                </div>
+                <!--<nav id="menu">
+                    <ul>
+                        <li><a href="#">Tour</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Public Pages</a></li>
+                    </ul>
+                </nav>-->
+            </div>
+        </header>
+        <article id="main">
+            <section id="banner">
+                <div id="lead-text" class="clearfix">
+                    <span class="lead-line">See here the list</span>
+                    <span class="lead-line">of all nightclubs</span>
+                </div>
+            </section>
+            <section id="searchbar">
+                <div class="container clearfix">
+                    <input id="search" type="text">
+                    <div id="location">
+                        <span>All Locations</span>
+                        <i class="icon-caret-down"></i>
+                        <div class="locations scroll">
+                            <ul>
+                                <li data-id="1">Corte Madera</li>
+
+                                <li data-id="2">Fairfax</li>
+
+                                <li data-id="3">Greenbrae</li>
+
+                                <li data-id="4">Healdsburg/Windsor</li>
+
+                                <li data-id="5">Kentfield/Ross</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="container clearfix">
+                <section id="results" class="clearfix">
+                    <div class="result-item" id="1" data-location="1">
+                        <header class="result-item-header" style="background-image:url(images/klangprojektor.jpeg);">
+                            <div class="result-item-map">
+                                <img src="http://maps.googleapis.com/maps/api/staticmap?center=Williamsburg,Brooklyn,NY&zoom=13&size=400x400&markers=color:blue%7Clabel:S%7C11211&sensor=false">
+                            </div>
+                        </header>
+                        <div class="result-item-main clearfix">
+                            <div class="result-item-info">
+                                <span class="result-item-name">The Night Club Lore</span>
+                                <span class="result-item-city">The City</span>
+                                <span class="result-item-adress">The Adress</span>
+                            </div>
+                        </div>
+                        <div class="result-item-buttons clearfix">
+                            <div class="result-item-social">
+                                <a class="result-item-buttons-like result-item-buttons-button"><i class="icon-heart"></i> 45</a>
+                                <a class="result-item-buttons-button"><i class="icon-share"></i> Share</a>
+                            </div>
+                            <div class="result-item-tools">
+                                <a class="result-item-buttons-button result-item-map-button"><i class="icon-map-marker"></i></a>
+                                <a class="result-item-buttons-button result-item-picture-button"><i class="icon-picture"></i></a>
+                                <a class="result-item-buttons-button"><i class="icon-info-sign"></i>   <i class="icon-caret-down"></i></a>
+                            </div>
+                        </div>
+                        <div class="ribbon-wrapper"><div class="ribbon">Featured</div></div>
+                    </div>
+                    <div class="result-item" id="2" data-location="1">
+                        <header class="result-item-header" style="background-image:url(images/klangprojektor.jpeg);">
+                            <div class="result-item-map">
+                                <img src="http://maps.googleapis.com/maps/api/staticmap?center=Williamsburg,Brooklyn,NY&zoom=13&size=400x400&markers=color:blue%7Clabel:S%7C11211&sensor=false">
+                            </div>
+                        </header>
+                        <div class="result-item-main">
+                            <div class="result-item-info">
+                                <span class="result-item-name">The Night Club Ipsu</span>
+                                <span class="result-item-city">The City</span>
+                                <span class="result-item-adress">The Adress</span>
+                            </div>
+                        </div>
+                        <div class="result-item-buttons clearfix">
+                            <div class="result-item-social">
+                                <a class="result-item-buttons-like result-item-buttons-button"><i class="icon-heart"></i> 45</a>
+                                <a class="result-item-buttons-button"><i class="icon-share"></i> Share</a>
+                            </div>
+                            <div class="result-item-tools">
+                                <a class="result-item-buttons-button result-item-map-button"><i class="icon-map-marker"></i></a>
+                                <a class="result-item-buttons-button result-item-picture-button"><i class="icon-picture"></i></a>
+                                <a class="result-item-buttons-button"><i class="icon-info-sign"></i>   <i class="icon-caret-down"></i></a>
+                            </div>
+                        </div>
+                        <div class="ribbon-wrapper">
+                            <div class="ribbon">Featured</div>
+                        </div>
+                    </div>
+                    <div class="result-item" id="3" data-location="2">
+                        <header class="result-item-header" style="background-image:url(images/klangprojektor.jpeg);">
+                            <div class="result-item-map">
+                                <img src="http://maps.googleapis.com/maps/api/staticmap?center=Williamsburg,Brooklyn,NY&zoom=13&size=400x400&markers=color:blue%7Clabel:S%7C11211&sensor=false">
+                            </div>
+                        </header>
+                        <div class="result-item-main">
+                            <div class="result-item-info">
+                                <span class="result-item-name">The Night Club Dolor</span>
+                                <span class="result-item-city">The City</span>
+                                <span class="result-item-adress">The Adress</span>
+                            </div>
+                        </div>
+                        <div class="result-item-buttons clearfix">
+                            <div class="result-item-social">
+                                <a class="result-item-buttons-like result-item-buttons-button"><i class="icon-heart"></i> 45</a>
+                                <a class="result-item-buttons-button"><i class="icon-share"></i> Share</a>
+                            </div>
+                            <div class="result-item-tools">
+                                <a class="result-item-buttons-button result-item-map-button"><i class="icon-map-marker"></i></a>
+                                <a class="result-item-buttons-button result-item-picture-button"><i class="icon-picture"></i></a>
+                                <a class="result-item-buttons-button"><i class="icon-info-sign"></i>   <i class="icon-caret-down"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-item" id="4" data-location="2">
+                        <header class="result-item-header" style="background-image:url(images/klangprojektor.jpeg);">
+                            <div class="result-item-map">
+                                <img src="http://maps.googleapis.com/maps/api/staticmap?center=Williamsburg,Brooklyn,NY&zoom=13&size=400x400&markers=color:blue%7Clabel:S%7C11211&sensor=false">
+                            </div>
+                        </header>
+                        <div class="result-item-main">
+                            <div class="result-item-info">
+                                <span class="result-item-name">The Night Club Sit</span>
+                                <span class="result-item-city">The City</span>
+                                <span class="result-item-adress">The Adress</span>
+                            </div>
+                        </div>
+                        <div class="result-item-buttons clearfix">
+                            <div class="result-item-social">
+                                <a class="result-item-buttons-like result-item-buttons-button"><i class="icon-heart"></i> 45</a>
+                                <a class="result-item-buttons-button"><i class="icon-share"></i> Share</a>
+                            </div>
+                            <div class="result-item-tools">
+                                <a class="result-item-buttons-button result-item-map-button"><i class="icon-map-marker"></i></a>
+                                <a class="result-item-buttons-button result-item-picture-button"><i class="icon-picture"></i></a>
+                                <a class="result-item-buttons-button"><i class="icon-info-sign"></i>   <i class="icon-caret-down"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-item" id="5" data-location="2">
+                        <header class="result-item-header" style="background-image:url(images/klangprojektor.jpeg);">
+                            <div class="result-item-map">
+                                <img src="http://maps.googleapis.com/maps/api/staticmap?center=Williamsburg,Brooklyn,NY&zoom=13&size=400x400&markers=color:blue%7Clabel:S%7C11211&sensor=false">
+                            </div>
+                        </header>
+                        <div class="result-item-main">
+                            <div class="result-item-info">
+                                <span class="result-item-name">The Night Club Amet</span>
+                                <span class="result-item-city">The City</span>
+                                <span class="result-item-adress">The Adress</span>
+                            </div>
+                        </div>
+                        <div class="result-item-buttons clearfix">
+                            <div class="result-item-social">
+                                <a class="result-item-buttons-like result-item-buttons-button"><i class="icon-heart"></i> 45</a>
+                                <a class="result-item-buttons-button"><i class="icon-share"></i> Share</a>
+                            </div>
+                            <div class="result-item-tools">
+                                <a class="result-item-buttons-button result-item-map-button"><i class="icon-map-marker"></i></a>
+                                <a class="result-item-buttons-button result-item-picture-button"><i class="icon-picture"></i></a>
+                                <a class="result-item-buttons-button"><i class="icon-info-sign"></i>   <i class="icon-caret-down"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-item" id="6" data-location="3">
+                        <header class="result-item-header" style="background-image:url(images/klangprojektor.jpeg);">
+                            <div class="result-item-map">
+                                <img src="http://maps.googleapis.com/maps/api/staticmap?center=Williamsburg,Brooklyn,NY&zoom=13&size=400x400&markers=color:blue%7Clabel:S%7C11211&sensor=false">
+                            </div>
+                        </header>
+                        <div class="result-item-main">
+                            <div class="result-item-info">
+                                <span class="result-item-name">The Night Club Cons</span>
+                                <span class="result-item-city">The City</span>
+                                <span class="result-item-adress">The Adress</span>
+                            </div>
+                        </div>
+                        <div class="result-item-buttons clearfix">
+                            <div class="result-item-social">
+                                <a class="result-item-buttons-like result-item-buttons-button"><i class="icon-heart"></i> 45</a>
+                                <a class="result-item-buttons-button"><i class="icon-share"></i> Share</a>
+                            </div>
+                            <div class="result-item-tools">
+                                <a class="result-item-buttons-button result-item-map-button"><i class="icon-map-marker"></i></a>
+                                <a class="result-item-buttons-button result-item-picture-button"><i class="icon-picture"></i></a>
+                                <a class="result-item-buttons-button"><i class="icon-info-sign"></i>   <i class="icon-caret-down"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-item" id="7" data-location="3">
+                        <header class="result-item-header" style="background-image:url(images/klangprojektor.jpeg);">
+                            <div class="result-item-map">
+                                <img src="http://maps.googleapis.com/maps/api/staticmap?center=Williamsburg,Brooklyn,NY&zoom=13&size=400x400&markers=color:blue%7Clabel:S%7C11211&sensor=false">
+                            </div>
+                        </header>
+                        <div class="result-item-main">
+                            <div class="result-item-info">
+                                <span class="result-item-name">The Night Club Adipi</span>
+                                <span class="result-item-city">The City</span>
+                                <span class="result-item-adress">The Adress</span>
+                            </div>
+                        </div>
+                        <div class="result-item-buttons clearfix">
+                            <div class="result-item-social">
+                                <a class="result-item-buttons-like result-item-buttons-button"><i class="icon-heart"></i> 45</a>
+                                <a class="result-item-buttons-button"><i class="icon-share"></i> Share</a>
+                            </div>
+                            <div class="result-item-tools">
+                                <a class="result-item-buttons-button result-item-map-button"><i class="icon-map-marker"></i></a>
+                                <a class="result-item-buttons-button result-item-picture-button"><i class="icon-picture"></i></a>
+                                <a class="result-item-buttons-button"><i class="icon-info-sign"></i>   <i class="icon-caret-down"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-item" id="8" data-location="3">
+                        <header class="result-item-header" style="background-image:url(images/klangprojektor.jpeg);">
+                            <div class="result-item-map">
+                                <img src="http://maps.googleapis.com/maps/api/staticmap?center=Williamsburg,Brooklyn,NY&zoom=13&size=400x400&markers=color:blue%7Clabel:S%7C11211&sensor=false">
+                            </div>
+                        </header>
+                        <div class="result-item-main">
+                            <div class="result-item-info">
+                                <span class="result-item-name">The Night Club Elit</span>
+                                <span class="result-item-city">The City</span>
+                                <span class="result-item-adress">The Adress</span>
+                            </div>
+                        </div>
+                        <div class="result-item-buttons clearfix">
+                            <div class="result-item-social">
+                                <a class="result-item-buttons-like result-item-buttons-button"><i class="icon-heart"></i> 45</a>
+                                <a class="result-item-buttons-button"><i class="icon-share"></i> Share</a>
+                            </div>
+                            <div class="result-item-tools">
+                                <a class="result-item-buttons-button result-item-map-button"><i class="icon-map-marker"></i></a>
+                                <a class="result-item-buttons-button result-item-picture-button"><i class="icon-picture"></i></a>
+                                <a class="result-item-buttons-button"><i class="icon-info-sign"></i>   <i class="icon-caret-down"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-item" id="9" data-location="4">
+                        <header class="result-item-header" style="background-image:url(images/klangprojektor.jpeg);">
+                            <div class="result-item-map">
+                                <img src="http://maps.googleapis.com/maps/api/staticmap?center=Williamsburg,Brooklyn,NY&zoom=13&size=400x400&markers=color:blue%7Clabel:S%7C11211&sensor=false">
+                            </div>
+                        </header>
+                        <div class="result-item-main">
+                            <div class="result-item-info">
+                                <span class="result-item-name">The Night Club Aliquam</span>
+                                <span class="result-item-city">The City</span>
+                                <span class="result-item-adress">The Adress</span>
+                            </div>
+                        </div>
+                        <div class="result-item-buttons clearfix">
+                            <div class="result-item-social">
+                                <a class="result-item-buttons-like result-item-buttons-button"><i class="icon-heart"></i> 45</a>
+                                <a class="result-item-buttons-button"><i class="icon-share"></i> Share</a>
+                            </div>
+                            <div class="result-item-tools">
+                                <a class="result-item-buttons-button result-item-map-button"><i class="icon-map-marker"></i></a>
+                                <a class="result-item-buttons-button result-item-picture-button"><i class="icon-picture"></i></a>
+                                <a class="result-item-buttons-button"><i class="icon-info-sign"></i>   <i class="icon-caret-down"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-item" id="10" data-location="4">
+                        <header class="result-item-header" style="background-image:url(images/klangprojektor.jpeg);">
+                            <div class="result-item-map">
+                                <img src="http://maps.googleapis.com/maps/api/staticmap?center=Williamsburg,Brooklyn,NY&zoom=13&size=400x400&markers=color:blue%7Clabel:S%7C11211&sensor=false">
+                            </div>
+                        </header>
+                        <div class="result-item-main">
+                            <div class="result-item-info">
+                                <span class="result-item-name">The Night Club Sodales</span>
+                                <span class="result-item-city">The City</span>
+                                <span class="result-item-adress">The Adress</span>
+                            </div>
+                        </div>
+                        <div class="result-item-buttons clearfix">
+                            <div class="result-item-social">
+                                <a class="result-item-buttons-like result-item-buttons-button"><i class="icon-heart"></i> 45</a>
+                                <a class="result-item-buttons-button"><i class="icon-share"></i> Share</a>
+                            </div>
+                            <div class="result-item-tools">
+                                <a class="result-item-buttons-button result-item-map-button"><i class="icon-map-marker"></i></a>
+                                <a class="result-item-buttons-button result-item-picture-button"><i class="icon-picture"></i></a>
+                                <a class="result-item-buttons-button"><i class="icon-info-sign"></i>   <i class="icon-caret-down"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="results-pagination-container">
+                    <ul id="results-pagination">
+                    </ul>
+                </section>
+            </div>
+        </article>
+   
+
+        <footer id="footer">
+
+        </footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-38547756-1']);
+		  _gaq.push(['_trackPageview']);
+		
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+    </body>
+</html>
