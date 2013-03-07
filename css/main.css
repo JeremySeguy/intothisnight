@@ -595,6 +595,31 @@ a.button:hover {
         width: 100%;
         margin-left: 0;
     }
+
+    .ribbon-wrapper {
+      position: relative;
+      top: auto;
+      right: auto;
+      width: auto;
+      height: auto;
+    }
+
+    .ribbon {
+      transform:         rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -moz-transform:    rotate(0deg);
+      -ms-transform:     rotate(0deg);
+      -o-transform:      rotate(0deg);
+      position: relative;
+      left: auto;
+      top: auto;
+      width: auto;
+      margin: 25px auto 0;
+    }
+
+    .ribbon:before, .ribbon:after {
+      display: none;
+    }
 }
 
 @media screen and (max-width: 420px) {
@@ -654,6 +679,31 @@ a.button:hover {
 
     #menu ul li:last-child{
         margin-top: 10px;
+    }
+
+    .ribbon-wrapper {
+      position: relative;
+      top: auto;
+      right: auto;
+      width: auto;
+      height: auto;
+    }
+
+    .ribbon {
+      transform:         rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -moz-transform:    rotate(0deg);
+      -ms-transform:     rotate(0deg);
+      -o-transform:      rotate(0deg);
+      position: relative;
+      left: auto;
+      top: auto;
+      width: auto;
+      margin: 25px auto 0;
+    }
+
+    .ribbon:before, .ribbon:after {
+      display: none;
     }
 }
 
