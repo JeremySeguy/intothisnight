@@ -269,3 +269,41 @@ $(function(){
 	});
 
 });
+
+/*-----------------------------------------------------------------------------------
+
+  Twitter
+
+-----------------------------------------------------------------------------------*/
+
+!function(d,s,id){
+	var js,fjs=d.getElementsByTagName(s)[0];
+	if(!d.getElementById(id)){js=d.createElement(s);
+		js.id=id;js.src="//platform.twitter.com/widgets.js";
+		fjs.parentNode.insertBefore(js,fjs);
+}}(document,"script","twitter-wjs");
+
+$(function() {
+	function m(n, d) {
+		P = Math.pow;
+		R = Math.round
+		d = P(10, d);
+		i = 7;
+		while(i) {
+			(s = P(10, i-- * 3)) <= n && (n = R(n * d / s) / d + "KMGTPE"[i])
+		}
+		return n;
+	}
+
+	$.ajax({
+		url: 'http://api.twitter.com/1/users/show.json',
+		data: {
+			screen_name: 'intothisnight'
+		},
+		dataType: 'jsonp',
+		success: function(data) {
+		   count = data.followers_count;
+		   $('#followers').html(m(count, 1));
+		}
+	});
+});

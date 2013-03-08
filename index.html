@@ -89,39 +89,6 @@
                        	<span><div class="fb-like" data-href="http://www.facebook.com/pages/Intothisnightcom/506587609387251" data-send="false" data-layout="button_count" data-width="250" data-show-faces="false" data-font="verdana"></div></span>
     					&emsp;<span style="position: relative; color: white; font-size:18px; font-weight:bolder; top:2px;">&middot;</span>&emsp;
                         <span style="position:relative; top:5px;"><a href="https://twitter.com/intothisnight" class="twitter-follow-button" data-show-count="true" data-show-screen-name="false"></a></span>
-    					<script>
-    						!function(d,s,id){
-    							var js,fjs=d.getElementsByTagName(s)[0];
-    							if(!d.getElementById(id)){js=d.createElement(s);
-    								js.id=id;js.src="//platform.twitter.com/widgets.js";
-    								fjs.parentNode.insertBefore(js,fjs);
-    						}}(document,"script","twitter-wjs");
-
-    						$(function() {
-    							function m(n, d) {
-    								P = Math.pow;
-    								R = Math.round
-    								d = P(10, d);
-    								i = 7;
-    								while(i) {
-    									(s = P(10, i-- * 3)) <= n && (n = R(n * d / s) / d + "KMGTPE"[i])
-    								}
-    								return n;
-    							}
-    						
-    							$.ajax({
-    								url: 'http://api.twitter.com/1/users/show.json',
-    								data: {
-    									screen_name: 'intothisnight'
-    								},
-    								dataType: 'jsonp',
-    								success: function(data) {
-    								   count = data.followers_count;
-    								   $('#followers').html(m(count, 1));
-    								}
-    							});
-    						});
-    					</script>
                     </div>
                     <div class="ribbon-wrapper">
                         <div class="ribbon">Coming soon</div>
