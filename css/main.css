@@ -1,15 +1,48 @@
 /*
  * HTML5 Boilerplate
  *
- * What follows is the result of much research on cross-browser styling.
+ * TABLE OF CONTENTS:
+Base styles: opinionated defaults
+Chrome Frame prompt
+--------------------------------
+Author's custom styles
+--------------------------------
+Global
+Home Page: setup 
+Home Page: links
+Home Page: logo
+Home Page: menu
+Home Page: banner
+Home Page: positioning
+Home Page: content
+Home Page: links additional styling
+button styling
+Midnight Black button
+Azure Blue button
+ribbon styling
+content: social
+footer
+results
+      (to be expanded)
+disabling isotope css3 transitions
+media screen control
+Submit button styling
+INACTIVE facebook like styling
+INACTIVE twitter follow styling
+--------------------------------
+Helper classes
+Clearfix: contain floats
+Media queries
+Boiler Template media print
+Boiler Template Link Removal
+ *
+ *
+ * credits: What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
-
 /* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
+Base styles: opinionated defaults*/
 @font-face {
     font-family: 'SocialGlyphs';
     src: url('../font/socialglyphs-webfont.eot');
@@ -20,8 +53,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
-
 html,
 button,
 input,
@@ -29,12 +60,10 @@ select,
 textarea {
     color: #222;
 }
-
 body {
     font-size: 1em;
     line-height: 1.4;
 }
-
 html,
 body {
    margin:0;
@@ -45,27 +74,22 @@ body {
    min-height:100%;
    position:relative;
 }
-
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection declarations have to be separate.
  * Customize the background color to match your design.
  */
-
 ::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
 }
-
 ::selection {
     background: #b3d4fc;
     text-shadow: none;
 }
-
 /*
  * A better looking default horizontal rule
  */
-
 hr {
     display: block;
     height: 1px;
@@ -74,11 +98,9 @@ hr {
     margin: 1em 0;
     padding: 0;
 }
-
 /*
  * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
  */
-
 img {
     vertical-align: middle;
 }
@@ -86,35 +108,31 @@ img {
 /*
  * Remove default fieldset styles.
  */
-
 fieldset {
     border: 0;
     margin: 0;
     padding: 0;
 }
-
 /*
  * Allow only vertical resizing of textareas.
  */
-
 textarea {
     resize: vertical;
 }
-
 /* ==========================================================================
-   Chrome Frame prompt
-   ========================================================================== */
-
+Chrome Frame prompt*/
 .chromeframe {
     margin: 0.2em 0;
     background: #ccc;
     color: #000;
     padding: 0.2em 0;
 }
-
+/* ==========================================================================*/
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+/* ==========================================================================*/
+/*Global*/
 * { 
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
@@ -127,18 +145,39 @@ body {
     color: #4c4d51;
     background: #f8f7f3;
 }
-
-html.homepage { 
-  background: url(../img/bg.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-h1, h2, h3, h4, h5, h6{
-}
-
+/* ==========================================================================
+Home Page: setup*/
+	html.homepage { 
+	  background: url(../img/bg.jpg) no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	}
+	h1, h2, h3, h4, h5, h6{
+	}
+	.container{
+		width: 960px;
+		padding: 0 10px;
+		max-width: 100%;
+		/*min-width: 700px; temp*/
+		margin: auto;
+	}
+	#header{
+		display: block;
+		width: 100%;
+		/*min-width: 700px; /*temp*/
+		height: 80px;
+		position: relative;
+	
+		background: #fff;
+		border-top: 3px solid #000;
+	
+		-webkit-box-shadow: 0 1px 5px -1px rgba(0,0,0,.4);
+		-moz-box-shadow: 0 1px 5px -1px rgba(0,0,0,.4);
+		box-shadow: 0 1px 5px -1px rgba(0,0,0,.4);
+	}
+/*Home Page: links*/
 a{
     text-decoration: none;
     color: #222;
@@ -147,33 +186,10 @@ a{
     -webkit-transition: color .3s; /* Safari and Chrome */
     -o-transition: color .3s; /* Opera */
 }
-
 a:hover, a.selected{
     color: #ea4848;
 }
-
-.container{
-    width: 960px;
-    padding: 0 10px;
-    max-width: 100%;
-    /*min-width: 700px; temp*/
-    margin: auto;
-}
-
-#header{
-    display: block;
-    width: 100%;
-    /*min-width: 700px; /*temp*/
-    height: 80px;
-    position: relative;
-
-    background: #fff;
-    border-top: 3px solid #000;
-
-    -webkit-box-shadow: 0 1px 5px -1px rgba(0,0,0,.4);
-    -moz-box-shadow: 0 1px 5px -1px rgba(0,0,0,.4);
-    box-shadow: 0 1px 5px -1px rgba(0,0,0,.4);
-}
+/*Home Page: logo*/
 #logo{
     line-height: 40px;
     font-size: 2.2em;
@@ -184,6 +200,8 @@ a:hover, a.selected{
 .logo{
     font-family: 'Great Vibes', cursive;
 }
+/*Home Page: menu*/
+
 #menu{
     float: right;
     font-size: 1.1em;
@@ -199,7 +217,7 @@ a:hover, a.selected{
 #menu ul li:last-child{
     margin-right: 0px;
 }
-
+/*Home Page: banner*/
 #banner{
     height: 200px;
     background: url(../img/bg.jpg) no-repeat center center; 
@@ -208,7 +226,6 @@ a:hover, a.selected{
     -o-background-size: cover;
     background-size: cover;
 }
-
 #banner #lead-text{
     position: relative;
     z-index: 2;
@@ -219,7 +236,6 @@ a:hover, a.selected{
     margin: 0 auto;
     opacity: 1;
 }
-
 #banner .lead-line{
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
@@ -232,16 +248,15 @@ a:hover, a.selected{
     margin-bottom: 2px;
     padding: .4em 0;
 }
-
+/*Home Page: positioning*/
 .homepage #main{
     padding-bottom: 40px;
 }
-
 #overlay{
     padding: 130px 0;
     display: block;
 }
-
+/*Home Page: content*/
 #content{
     position: absolute;
     margin-top: -65px;
@@ -262,11 +277,9 @@ a:hover, a.selected{
     -moz-border-radius: 4px;
     border-radius: 4px;
 }
-
 #content .logo{
     font-size: 2em;
 }
-
 #content h1{
     font-weight: 500;
     font-size: 2.5em;
@@ -274,26 +287,21 @@ a:hover, a.selected{
 	padding: 0;
     margin-top: 0;
 }
-
 #content h1 strong{
     font-weight: 500;
 }
-
 #content hr{
     border-top: 1px solid rgba(255,255,255,.2);
     height: 0;
     margin-left: -20px;
     width: 400px;
 }
-
 #content span.subtitle{
 }
-
 #content form{
     position: relative;
     padding: 10px;
 }
-
 #content input#email{
     border: none;
     opacity: .99;
@@ -319,7 +327,6 @@ a:hover, a.selected{
     color: #222;
 
 }
-
 #content input#email:focus{
     box-shadow: 0 1px 0 rgba(255,255,255,0.2), inset 0 1px 1px rgba(0,0,0,0.1), 0 0 0 3px rgba(255,255,255,0.15);
     background: rgba(255, 255, 255, 0.9);
@@ -330,34 +337,28 @@ a:hover, a.selected{
     -webkit-transition: all .3s; /* Safari and Chrome */
     -o-transition: all .3s; /* Opera */
 }
-
 #content input#email::-webkit-input-placeholder {
     color: #656565;
     text-shadow: 0 1px 1px rgba(0,0,0,.25);
 }
-
 #content input#email:-moz-placeholder {
     color: #656565;
     text-shadow: 0 1px 1px rgba(0,0,0,.25);
 }
-
 #content input#email:focus:-ms-input-placeholder {
     color: #656565;
     text-shadow: 0 1px 1px rgba(0,0,0,.25);
 }
-
 #content input#email:focus::-webkit-input-placeholder {
     text-shadow: none;
 }
-
 #content input#email:focus:-moz-placeholder {
     text-shadow: none;
 }
-
 #content input#email:focus:-ms-input-placeholder {
     text-shadow: none;
 }
-
+/*Home Page: links additional styling*/
 a.button,
 a.button:visited,
 a.button:hover {
@@ -365,7 +366,6 @@ a.button:hover {
     outline: 0 !important;
     text-decoration: none;
 }
-
 #content input#submit{
     position: absolute;
     top: 14px;
@@ -374,7 +374,7 @@ a.button:hover {
     border: none;
     margin: 0;
 }
-
+/*button styling*/
 .button {
     display: inline-block;
     font-weight: bold;
@@ -388,7 +388,6 @@ a.button:hover {
     position: relative;
     margin: 0 10px 10px 0;
 }
-
 .button:after {
     position: absolute;
     display: block;
@@ -403,19 +402,15 @@ a.button:hover {
     -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
-
 .button:active {
     -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 1px rgba(0, 0, 0, 0.02) !important;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 1px rgba(0, 0, 0, 0.02) !important;
 }
-
 .button:active:after {
     -webkit-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5) !important;
     box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5) !important;
 }
-
-/* Midnight Black */
-
+/*Midnight Black button*/
 .black-button:hover {
     -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 1px 0 0 #7c8184;
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 1px 0 0 #7c8184;
@@ -428,12 +423,10 @@ a.button:hover {
     background-image: linear-gradient(top, #676b6d, #484a4c);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#676b6d', EndColorStr='#484a4c');
 }
-
 .black-button {
     -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 1px 0 0 #6f7476;
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 1px 0 0 #6f7476;
 }
-
 .black-button,
 .black-button:active {
     background-color: #5c6062;
@@ -445,7 +438,6 @@ a.button:hover {
     background-image: linear-gradient(top, #5c6062, #434547);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#5c6062', EndColorStr='#434547');
 }
-
 .black-button:after {
     background-color: #37383a;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#37383a), to(#252627));
@@ -456,7 +448,6 @@ a.button:hover {
     background-image: linear-gradient(top, #37383a, #252627);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#37383a', EndColorStr='#252627');
 }
-
 .black-button:active:after {
     background-color: #323435;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#323435), to(#292b2b));
@@ -467,9 +458,7 @@ a.button:hover {
     background-image: linear-gradient(top, #323435, #292b2b);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#323435', EndColorStr='#292b2b');
 }
-
-/* Azure Blue */
-
+/*Azure Blue button*/
 .azure-button:hover {
     -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 1px 0 0 #71c3f6;
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 1px 0 0 #71c3f6;
@@ -482,12 +471,10 @@ a.button:hover {
     background-image: linear-gradient(top, #5db5f4, #4193ef);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#5db5f4', EndColorStr='#4193ef');
 }
-
 .azure-button {
     -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 1px 0 0 #64baf5;
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 1px 0 0 #64baf5;
 }
-
 .azure-button,
 .azure-button:active {
     background-color: #54abf2;
@@ -499,7 +486,6 @@ a.button:hover {
     background-image: linear-gradient(top, #54abf2, #3d8aed);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#54abf2', EndColorStr='#3d8aed');
 }
-
 .azure-button:after {
     background-color: #3187ed;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#3187ed), to(#204ce4));
@@ -510,7 +496,6 @@ a.button:hover {
     background-image: linear-gradient(top, #3187ed, #204ce4);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#3187ed', EndColorStr='#204ce4');
 }
-
 .azure-button:active:after {
     background-color: #2d79eb;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#2d79eb), to(#255be6));
@@ -521,8 +506,7 @@ a.button:hover {
     background-image: linear-gradient(top, #2d79eb, #255be6);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#2d79eb', EndColorStr='#255be6');
 }
-
-
+/*ribbon styling*/
 .ribbon-wrapper {
   width: 85px;
   height: 88px;
@@ -555,7 +539,6 @@ a.button:hover {
   -moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
   box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
 }
-
 .ribbon:before, .ribbon:after {
   content: "";
   border-top:   3px solid #005c8a;   
@@ -564,14 +547,13 @@ a.button:hover {
   position:absolute;
   bottom: -3px;
 }
-
 .ribbon:before {
   left: 0;
 }
 .ribbon:after {
   right: 0;
 }
-
+/*content: social*/
 #content .social{
     text-align: center;
     list-style: none;
@@ -581,7 +563,7 @@ a.button:hover {
 #content ul.social li{
     display: inline-block;
 }
-
+/*footer*/
 #footer{
     display: block;
     width: 100%;
@@ -595,12 +577,7 @@ a.button:hover {
     bottom: 0;
     left: 0;
 }
-
-
-
-/*
-// Results
-*/
+/*Results*/
 #searchbar{
   height: 60px;
   margin: 0 auto 10px;
@@ -610,7 +587,6 @@ a.button:hover {
   display: block;
   text-align: center;
 }
-
 #searchbar input{
   display: inline-block;
   border: 1px solid rgba(48,48,48, 0.8);
@@ -620,12 +596,10 @@ a.button:hover {
   padding: 8px 4px 8px 10px;
   color: #fff;
 }
-
 #searchbar input:focus{
   background-color: rgba(0,0,0,0.35);
   outline: none;
 }
-
 #searchbar #location {
   margin-right: 12px;
   width: 100px;
@@ -643,15 +617,12 @@ a.button:hover {
   position: relative;
   vertical-align: top;
 }
-
 #searchbar #location:hover, #searchbar #location.selected {
   background-color: rgba(0,0,0,0.35);
 }
-
 #searchbar #location span{
   margin-right: 5px;
 }
-
 #searchbar #location .locations {
   max-height: 200px;
   width: 214px;
@@ -667,18 +638,15 @@ a.button:hover {
   top: 36px;
   z-index: 1;
 }
-
 #searchbar #location .locations ul{
   color: #FFF;
   padding: 0 12px;
   list-style: none;
 }
-
 #searchbar #location .locations ul li:hover, #searchbar #location .locations ul li.selected{
   background: rgba(0,0,0,.9);
   padding-left: 10px;
 }
-
 #results{
     margin: auto;
 }
@@ -697,11 +665,9 @@ a.button:hover {
 
     float: left;
 }
-
 .result-item:nth-child(1){
 
 }
-
 .result-item-header{
     height: 160px;
     margin: 10px;
@@ -717,15 +683,12 @@ a.button:hover {
     -moz-border-radius: 4px 4px 0 0;
     border-radius: 4px 4px 0 0;
 }
-
 .result-item-main{
     padding: 0 10px;
 }
-
 .show-map .result-item-map{
     margin-top: 0;
 }
-
 .result-item-map{
     margin-top: 160px;
     width: 180px;
@@ -736,7 +699,6 @@ a.button:hover {
     -webkit-transition: all .3s; /* Safari and Chrome */
     -o-transition: all .3s; /* Opera */
 }
-
 .result-item-map img{
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -745,10 +707,8 @@ a.button:hover {
     -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
-
 .result-item-info{
 }
-
 .result-item-info span{
     display: block;
     line-height: 1.1em;
@@ -757,18 +717,15 @@ a.button:hover {
 .result-item-name{
     font-weight: bold;
 }
-
 .result-item-city{
     color: #57abbc;
     font-weight: bold;
     font-size: .8em;
 }
-
 .result-item-adress{
     color: #818080;
     font-size: .8em;
 }
-
 .result-item-buttons{
     background: rgba(0, 0, 0, 0.1);
     padding: 10px;
@@ -778,15 +735,12 @@ a.button:hover {
     -moz-border-radius: 0 0 4px 4px;
     border-radius: 0 0 4px 4px;
 }
-
 .result-item-social{
     float: left;
 }
-
 .result-item-tools{
     float: right;
 }
-
 a.result-item-buttons-button{
     padding: 4px 7px;
     color: #818181;
@@ -809,39 +763,30 @@ a.result-item-buttons-button{
     -o-transition: color 0s; /* Opera */
 
 }
-
 a.result-item-buttons-button:hover{
     background: #fcfcfc;
 }
-
 a.result-item-buttons-button:active{
     background: #fcfcfc;
     -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2) inset;
     -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2) inset;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.2) inset;
 }
-
 a.result-item-buttons-button:hover, a.result-item-buttons-button:hover i{
     color: #222;
 }
-
 a.result-item-buttons-like:hover i{
     color: #ff4448;
 }
-
 a.result-item-buttons-button i{
     color: #abaaaa;
 }
-
 .show-map a.result-item-map-button, a.result-item-picture-button{
     display: none;
 }
-
 a.result-item-map-button, .show-map a.result-item-picture-button{
     display: inline-block;
 }
-
-
 .isotope,
 .isotope .isotope-item {
   /* change duration value to whatever you like */
@@ -851,7 +796,6 @@ a.result-item-map-button, .show-map a.result-item-picture-button{
        -o-transition-duration: 0.8s;
           transition-duration: 0.8s;
 }
-
 .isotope {
   -webkit-transition-property: height, width;
      -moz-transition-property: height, width;
@@ -859,7 +803,6 @@ a.result-item-map-button, .show-map a.result-item-picture-button{
        -o-transition-property: height, width;
           transition-property: height, width;
 }
-
 .isotope .isotope-item {
   -webkit-transition-property: -webkit-transform, opacity;
      -moz-transition-property:    -moz-transform, opacity;
@@ -867,9 +810,7 @@ a.result-item-map-button, .show-map a.result-item-picture-button{
        -o-transition-property:      -o-transform, opacity;
           transition-property:         transform, opacity;
 }
-
 /**** disabling Isotope CSS3 transitions ****/
-
 .isotope.no-transition,
 .isotope.no-transition .isotope-item,
 .isotope .isotope-item.no-transition {
@@ -879,14 +820,12 @@ a.result-item-map-button, .show-map a.result-item-picture-button{
        -o-transition-duration: 0s;
           transition-duration: 0s;
 }
-
 ul#results-pagination{
     list-style: none;
     padding: 0;
     margin: 0;
     text-align: center;
 }
-
 ul#results-pagination li{
     padding: 0;
     margin: 0;
@@ -896,31 +835,24 @@ ul#results-pagination li{
     background: rgba(255, 255, 255, 0.8);
     cursor: pointer;
 }
-
 ul#results-pagination li a{
     color: #222;
 }
-
 ul#results-pagination li.active{
     background: rgba(230, 230, 230, 0.8);
     border-left: 1px solid rgba(0,0,0,.1);
     border-right: 1px solid rgba(0,0,0,.1);
 }
-
 ul#results-pagination li:hover{
     background: rgba(255, 255, 255, 0.9);
 }
-
 ul#results-pagination li:last-child.active{
     border-right: none;
 }
-
 ul#results-pagination li:first-child.active{
     border-left: none;
 }
-
-
-
+/*media screen control*/
 @media screen and (max-height: 425px) {
     #header,#main, #content{
         position: relative;
@@ -935,25 +867,20 @@ ul#results-pagination li:first-child.active{
         -moz-border-radius: 0;
         border-radius: 0;
     }
-
     #wrapper{
         background: rgba(0,0,0,.5);
     }
-
     #content, #header{
         height: auto;
     }
-
     #content{
         background: none;
         border: none;
     }
-
     #content hr{
         width: 100%;
         margin-left: 0;
     }
-
     .homepage .ribbon-wrapper {
       position: relative;
       top: auto;
@@ -961,7 +888,6 @@ ul#results-pagination li:first-child.active{
       width: auto;
       height: auto;
     }
-
     .homepage .ribbon {
       transform:         rotate(0deg);
       -webkit-transform: rotate(0deg);
@@ -974,12 +900,10 @@ ul#results-pagination li:first-child.active{
       width: auto;
       margin: 25px auto 0;
     }
-
     .homepage .ribbon:before, .ribbon:after {
       display: none;
     }
 }
-
 @media screen and (max-width: 420px) {
     #header,#main, #content{
         position: relative;
@@ -994,51 +918,41 @@ ul#results-pagination li:first-child.active{
         -moz-border-radius: 0;
         border-radius: 0;
     }
-
     #wrapper{
         min-width: 300px;
         background: rgba(0,0,0,.5);
     }
-
     #content hr{
         width: 100%;
         margin-left: 0;
     }
-
     #content, #header{
         height: auto;
     }
-
     #content{
         background: none;
         border: none;
     }
-
     #logo{
         display: block;
         margin: auto;
         width: 137px;
         float: none;
     }
-
     #menu{
         float: none;
         text-align: center;
     }
-
     #menu ul{
         margin-top: 29px;
     }
-
     #menu ul li{
         display: block;
         margin-right: 0;
     }
-
     #menu ul li:last-child{
         margin-top: 10px;
     }
-
     .homepage .ribbon-wrapper {
       position: relative;
       top: auto;
@@ -1046,7 +960,6 @@ ul#results-pagination li:first-child.active{
       width: auto;
       height: auto;
     }
-
     .homepage .ribbon {
       transform:         rotate(0deg);
       -webkit-transform: rotate(0deg);
@@ -1059,207 +972,11 @@ ul#results-pagination li:first-child.active{
       width: auto;
       margin: 25px auto 0;
     }
-
     .homepage .ribbon:before, .ribbon:after {
       display: none;
     }
 }
-
-
-
-
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Image replacement
- */
-
-.ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    /* IE 6/7 fallback */
-    *text-indent: -9999px;
-}
-
-.ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 150%;
-}
-
-/*
- * Hide from both screenreaders and browsers: h5bp.com/u
- */
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-/*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-/*
- * Hide visually and from screenreaders, but maintain layout
- */
-
-.invisible {
-    visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-
-.clearfix {
-    *zoom: 1;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   Theses examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid required HTTP connection: h5bp.com/r
-   ========================================================================== */
-
-@media print {
-    * {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster: h5bp.com/s */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links for images, or javascript/internal links
-     */
-
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    thead {
-        display: table-header-group; /* h5bp.com/t */
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    @page {
-        margin: 0.5cm;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-}
-
+/* ==========================================================================*/
 /*submit button styling*/
 .button-link {
     padding: 10px 15px;
@@ -1293,8 +1010,8 @@ ul#results-pagination li:first-child.active{
     background: #2E5481;
     border: solid 1px #203E5F;
 }
-
-/*facebook like styling*/
+/* ==========================================================================*/
+/*INACTIVE facebook like styling*/
 #fb-scale{
 	transform: scale(2.5);
 	-ms-transform: scale(2.5); 
@@ -1307,9 +1024,8 @@ ul#results-pagination li:first-child.active{
 	-moz-transform-origin: bottom left;
 	-webkit-transform-origin: bottom left;
 }
-
-
-/*twitter follow styling; count= vertical*/
+/* ==========================================================================*/
+/*INACTIVE twitter follow styling; count= vertical*/
 .twitter_box {
     width: 48px; height: 32px;
     position: absolute;
@@ -1355,3 +1071,166 @@ ul#results-pagination li:first-child.active{
     text-align: center;
     -webkit-font-smoothing: subpixel-antialiased;
    }
+/* ==========================================================================*/
+/* ==========================================================================*/
+/* ==========================================================================
+   Helper classes
+/*
+ * Image replacement
+ */
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+.invisible {
+    visibility: hidden;
+}
+/* ==========================================================================
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.clearfix:after {
+    clear: both;
+}
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+    *zoom: 1;
+}
+/* ==========================================================================
+media queries
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires. */
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+/* Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+/* ==========================================================================*/
+/*Boiler Template media print*/
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+/* ==========================================================================*/
+/* Boiler Template Link Removal
+ * Don't show links for images, or javascript/internal links
+ */
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+    img {
+        max-width: 100% !important;
+    }
+    @page {
+        margin: 0.5cm;
+    }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
