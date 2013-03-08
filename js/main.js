@@ -249,12 +249,12 @@ $(function(){
 		var str = $(this).serialize();
 		$.ajax({
 			type: "POST",
-			url: "php/signup.php",
+			url: "../php/signup.php",
 			data: str,
 			success: function(result){
 				if (result=='ok'){
 					document.getElementById("email").innerHTML='';
-					alert("Success! Will email you when ITN is ready.");
+					window.alert("Success! Will email you when ITN is ready.");
 				}
 				else{
 					alert(result);

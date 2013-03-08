@@ -1,7 +1,8 @@
 <?php
 	require "config.php";
-	$date=date('Y-M-j');
-	echo $date;
-	mysql_query("UPDATE signup SET date=$date WHERE id_user = 1") or die(mysql_error());
+	$sql=mysql_query("DELETE FROM signup WHERE id_user = 20") or die(mysql_error());
+	if($sql){
+		echo "ok";
+	}
 	mysql_close($conn);
 ?>

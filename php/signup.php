@@ -18,9 +18,9 @@
 	}
 	
 	//check for existing email
-	$sqlc = "SELECT * FROM signup WHERE email='" . $email;
+	$sqlc = "SELECT * FROM signup WHERE email='" . $email . "'";
 	$result = mysql_query($sqlc);	
-	if (!$result) {
+	if ($result) {
 		echo "Error! You are already signed up.";
 		exit;
 		}
