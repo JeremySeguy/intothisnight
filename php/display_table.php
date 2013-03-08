@@ -25,9 +25,11 @@
 		
 		if ($tname == "signup"){
 			$result2 = mysql_query("SELECT * FROM $tname");
+			$kount = mysql_num_rows($result2);
+			echo "&emsp;&emsp;&emsp;***total of " . $kount . " people signed up***<br>";
 			while($row = mysql_fetch_array($result2)){
 				echo "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ";
-			  	echo $row['id_user'] . ",&emsp;&emsp;" . $row['email'] . ",&emsp;&emsp;" . $row['date'];
+			  	echo $row['email'] . ",&emsp;&emsp;" . $row['date'];
 			  	echo "<br />";
 		  	}
 		}
