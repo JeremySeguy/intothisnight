@@ -565,11 +565,12 @@ a.button:hover {
 }
 /*footer*/
 #footer{
+	position: absolute;
     display: block;
     width: 100%;
     background: #fff;
     height: 40px;
-    margin-top: 40px;
+	bottom: 0;
 }
 
 .homepage #footer{
