@@ -2,8 +2,8 @@
 	$email = $_POST['email'];
 	$name = $_POST['name'];
 	$subject = "intothisnight.com feedback";
-	$message = $_POST['message'];
-	$combined = "name: " . $name . "<br>" . "email: " . $email . "<br>" . "message: " . $message;
+	$comments = $_POST['comments'];
+	$combined = "name: " . $name . "<br>" . "email: " . $email . "<br>" . "message: " . $comments;
 
 	$error = '';
 
@@ -28,7 +28,7 @@
 		$error = '<span id="erase" style="font-family:Arial, Helvetica, sans-serif; font-size:13px; overflow-y:hidden; color:#F00;">Please enter a valid email.</span>';
 	}
 
-	if(strlen($message)<1) {
+	if(strlen($comments)<1) {
 		$error = '<span id="erase" style="font-family:Arial, Helvetica, sans-serif; font-size:13px; overflow-y:hidden; color:#F00;">Please enter a message.</span>';	
 	}
 
@@ -36,7 +36,7 @@
 	if(strlen($error)==0){
 		$a = mail( $mail_to_send_to, $subject, $combined, $headers );
 		if ($a) {
-			echo '<span id="erase" style="font-family:Arial, Helvetica, sans-serif; font-size:13px; overflow-y:hidden; color:#0C0;">Success! <br> Confirmation email sent.</span>';
+			echo '<span id="erase" style="font-family:Arial, Helvetica, sans-serif; font-size:13px; overflow-y:hidden; color:#0C0;">Success! <br> Message sent.</span>';
 		}
 		else {
 			echo '<span id="erase" style="font-family:Arial, Helvetica, sans-serif; font-size:13px; overflow-y:hidden; color:#F00;">Error submitting! <br> Please retry.</span>';

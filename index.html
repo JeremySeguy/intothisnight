@@ -64,7 +64,7 @@
                     <h1><strong>Plan</strong> and <strong>share</strong> your <strong>parties</strong> with <strong>friends</strong>.</h1>
                     <span class="subtitle">Subscribe to our newsletter for early access with your email :</span>
                     <form id="signup" action="php/signup.php" method="post">
-                    	<input id="email" name="email" placeholder="email">
+                    	<input id="email" name="email" placeholder="email" onblur="$(this).css('color','#ccc');" onFocus="$(this).css('color','black');">
                         <input id="submit" class="button azure-button" type="submit" value="subscribe">
                     </form>
                     <hr/>
@@ -118,6 +118,13 @@
 			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
+		<!--TWITTER-->		  
+		  !function(d,s,id){
+			var js,fjs=d.getElementsByTagName(s)[0];
+			if(!d.getElementById(id)){js=d.createElement(s);
+			js.id=id;js.src="//platform.twitter.com/widgets.js";
+			fjs.parentNode.insertBefore(js,fjs);
+			}}(document,"script","twitter-wjs");
 		</script>
     </body>
 </html>

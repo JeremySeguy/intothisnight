@@ -29,6 +29,7 @@ media screen control
 Submit button styling
 INACTIVE facebook like styling
 INACTIVE twitter follow styling
+expectations page: inputs
 --------------------------------
 Helper classes
 Clearfix: contain floats
@@ -146,36 +147,36 @@ body {
 }
 /* ==========================================================================
 Home Page: setup*/
-	#homepage { 
-		background: url(../img/bg.jpg) no-repeat center center fixed; 
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-	}
-	h1, h2, h3, h4, h5, h6{
-	}
-	.container{
-		width: 960px;
-		padding: 0 10px;
-		max-width: 100%;
-		/*min-width: 700px; temp*/
-		margin: auto;
-	}
-	#header{
-		display: block;
-		width: 100%;
-		/*min-width: 700px; /*temp*/
-		height: 80px;
-		position: relative;
-	
-		background: #fff;
-		border-top: 3px solid #000;
-	
-		-webkit-box-shadow: 0 1px 5px -1px rgba(0,0,0,.4);
-		-moz-box-shadow: 0 1px 5px -1px rgba(0,0,0,.4);
-		box-shadow: 0 1px 5px -1px rgba(0,0,0,.4);
-	}
+#homepage { 
+	background: url(../img/bg.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+h1, h2, h3, h4, h5, h6{
+}
+.container{
+	width: 960px;
+	padding: 0 10px;
+	max-width: 100%;
+	/*min-width: 700px; temp*/
+	margin: auto;
+}
+#header{
+	display: block;
+	width: 100%;
+	/*min-width: 700px; /*temp*/
+	height: 80px;
+	position: relative;
+
+	background: #fff;
+	border-top: 3px solid #000;
+
+	-webkit-box-shadow: 0 1px 5px -1px rgba(0,0,0,.4);
+	-moz-box-shadow: 0 1px 5px -1px rgba(0,0,0,.4);
+	box-shadow: 0 1px 5px -1px rgba(0,0,0,.4);
+}
 /*Home Page: links*/
 a{
     text-decoration: none;
@@ -207,7 +208,7 @@ a:hover, a.selected{
 }
 #menu ul{
     margin: 0;
-    padding: 24px 0;
+    padding: 29px 0;
 }
 #menu ul li{
     display: inline-block;
@@ -1232,4 +1233,160 @@ media queries
         page-break-after: avoid;
     }
 }
+/* ==========================================================================*/
+/* Expectations Page: inputs */
+.inputs{
+    border: none;
+    opacity: .99;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
 
+    background-color: #999;
+	opacity: 0.8;
+
+    -moz-box-shadow:
+        0 1px 0 rgba(255,255,255,.08),
+        inset 0 1px 2px rgba(0,0,0,.22);
+    -webkit-box-shadow:
+        0 1px 0 rgba(255,255,255,.08),
+        inset 0 1px 2px rgba(0,0,0,.22);
+    box-shadow:
+        0 1px 0 rgba(255,255,255,.08),
+        inset 0 1px 2px rgba(0,0,0,.22);
+
+    
+    padding: 12px 10px 12px 10px;
+    width: 100%;
+    color: #222;
+
+}
+.inputs:focus{
+    box-shadow: 0 1px 0 rgba(255,255,255,0.2), inset 0 1px 1px rgba(0,0,0,0.1), 0 0 0 3px rgba(255,255,255,0.15);
+    background: rgba(255, 255, 255, 0.9);
+    outline: none;
+
+    transition: all .3s;
+    -moz-transition: all .3s; /* Firefox 4 */
+    -webkit-transition: all .3s; /* Safari and Chrome */
+    -o-transition: all .3s; /* Opera */
+}
+.inputs::-webkit-input-placeholder {
+    color: #656565;
+    text-shadow: 0 1px 1px rgba(0,0,0,.25);
+}
+.inputs:-moz-placeholder {
+    color: #656565;
+    text-shadow: 0 1px 1px rgba(0,0,0,.25);
+}
+.inputs:focus:-ms-input-placeholder {
+    color: #656565;
+    text-shadow: 0 1px 1px rgba(0,0,0,.25);
+}
+.inputs:focus::-webkit-input-placeholder {
+    text-shadow: none;
+}
+.inputs:focus:-moz-placeholder {
+    text-shadow: none;
+}
+.inputs:focus:-ms-input-placeholder {
+    text-shadow: none;
+}
+
+
+/*expectations styling*/
+
+#content2{
+     position: relative;
+    margin-top: 35px;
+    margin-left: auto;
+	margin-right: auto;
+    top: 33%;
+    /*left:45%;*/
+    padding: 20px;
+    width: 600px;
+    height: 460px;
+
+    text-align: center;
+
+    color: #fff;
+    background: rgba(0,0,0,.5);
+    border: 1px solid rgba(255,255,255,.2);
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+#feedback{
+	position: relative;
+	float: right;
+	top: 15px;
+	right: 125px;
+	
+	font-family: "Century Gothic";
+	color: #F60;
+	text-decoration: none;
+	font-size: 16px;
+	padding: 0;
+	margin: 0;	
+}
+#skyline img{
+	position: relative;
+	top: 45px;
+	margin-left: 150px;
+	width: 360px;
+	height: auto;	
+	z-index: 1;
+}
+#frmsubmit{
+    border: none;
+    margin: 0;
+	
+	line-height: 1;
+    text-decoration:none;
+    display: inline-block;
+    padding: 8px 12px;
+    text-transform:uppercase;
+    font-size:12px;
+    letter-spacing:1px;
+    cursor:pointer;
+}
+#upload_target{
+	position: absolute;
+	width:150px; 
+	height:45px; 
+	
+	border:0; 
+	overflow-x:hidden;
+	overflow-y:hidden;
+}
+#homepage2 { 
+	background: url(../img/bg2.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+	.homepage2 .ribbon-wrapper {
+	  position: relative;
+	  top: auto;
+	  right: auto;
+	  width: auto;
+	  height: auto;
+	}
+	.homepage2 .ribbon {
+	  transform:         rotate(0deg);
+	  -webkit-transform: rotate(0deg);
+	  -moz-transform:    rotate(0deg);
+	  -ms-transform:     rotate(0deg);
+	  -o-transform:      rotate(0deg);
+	  position: relative;
+	  left: auto;
+	  top: auto;
+	  width: auto;
+	  margin: 25px auto 0;
+	}
+	.homepage2 .ribbon:before, .ribbon:after {
+	  display: none;
+	}
