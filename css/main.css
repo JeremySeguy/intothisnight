@@ -156,6 +156,13 @@ Home Page: setup*/
 	-o-background-size: cover;
 	background-size: cover;
 }
+#homepage3 { 
+	background: url(../img/termsbg.jpg) no-repeat bottom center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
 h1, h2, h3, h4, h5, h6{
 }
 .container{
@@ -1395,7 +1402,7 @@ media queries
 	}
 /* ==========================================================================*/
 /*terms*/
-#content2{
+#content3{
     position: absolute;
     margin-top: -65px;
     top: 29%;
@@ -1414,12 +1421,12 @@ media queries
     -moz-border-radius: 4px;
     border-radius: 4px;
 }
-#content2h{
+#content3h{
 	width: 950px;
 	height: 400px;
 	overflow-y: scroll;
 }
-#content2h2{
+#content3h2{
 	position: relative;
 	width: 750px;
 	left: 100px;
