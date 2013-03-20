@@ -135,7 +135,7 @@
 			PRIMARY KEY (id_club,id_drink,id_price,id_party)
 		)") or die($error=$error . "<br>" . mysql_error());
 	
-	//12.create host table
+	//13.create signup table
 	$query=$query+mysql_query("
 		CREATE TABLE signup(
 			id_user int NOT NULL AUTO_INCREMENT,
