@@ -1,0 +1,32 @@
+{
+	"hashtags" : [
+		{
+			"id" : 1,
+			"text" : "truc"
+		},
+		{
+			"id" : 2,
+			"text" : "truc2"
+		},
+		{
+			"id" : 3,
+			"text" : "truc3"
+		},
+		{
+			"id" : 4,
+			"text" : "truc4"
+		},
+		{
+			"id" : 5,
+			"text" : "truc5"
+		},
+		{
+			"id" : 6,
+			"text" : "truc6"
+		},
+		{
+			"id" : 7,
+			"text" : "truc7"
+		}
+	]
+}

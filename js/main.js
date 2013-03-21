@@ -74,6 +74,35 @@ $(function(){
 	var currentFilter = {
 		"pagination" : '[data-pagination="1"]'
 	};
+	$('#nightclubs-list').select2({
+		placeholder: "Select a NightClub"
+	});
+	$('#hashtags').select2({
+		placeholder: "Pick hastags",
+	    minimumInputLength: 1,
+	    multiple: true,
+	    tags: [],
+	    ajax: { // instead of writing the function to execute the request we use Select2's convenient helper
+	        url: "../ajax/hashtag.json",
+	        dataType: 'json',
+	        data: function (term, page) {
+	            return {
+	                q: term // search term
+	            };
+	        },
+	        results: function (data) { // parse the results into the format expected by Select2.
+	            // since we are using custom formatting functions we do not need to alter remote JSON data
+	            return {results: data.hashtags};
+	        }
+	    }
+	});
+	/*$( "#datepicker" ).datepicker({ 
+		dateFormat: "dd/mm/yy",
+		altFormat: "dd/mm/yy",
+		onSelect: function(dateText) {
+			isotopeSearch();
+		}
+	});*/
 
 	function concatFilter(json){
 		var result = ".result-item";
@@ -91,40 +120,42 @@ $(function(){
 	        // reset results arrays
 	        var matches = [];
 	        var misses = [];
-	        var kwd = $('#search').val().toLowerCase();
-	        var locationsArray = [];
-	        var $matches
-
-	        $('#location').find('.locations').find('li.selected').each(function(index, value){
-	          locationsArray.push($(this).attr('data-id'));
-	        });
+	        var date = null;
+/*	        var date = $.datepicker.formatDate("dd/mm/yy", $("#datepicker").datepicker("getDate"));
+*/	        
+			var hashtagsVal = $('#hashtags').val();
+			var hashtagsArray = hashtagsVal.split(",");
+			var locationsArray = $('#nightclubs-list').val();
+	        var $matches;
 
 	        $('#noMatches').hide(); // ensure this is always hidden when we start a new query
 
-	        if ( (kwd != '') && (kwd.length >= 2) ) { // min 2 chars to execute query:
+	        console.log(hashtagsVal.length, hashtagsVal, hashtagsVal != "");
+
+	        if ( hashtagsVal.length ) { // if at least one hashtag is set:
 	                
-	                // loop through items array             
-	                $.each(items, function(index, item){
-	                        if ( item.name.indexOf(kwd) !== -1 ) { // keyword matches element
-	                                matches.push( $('#'+item.id)[0] );
-	                        } else {
-	                                misses.push( $('#'+item.id)[0] );
-	                        }
+	                // loop through items array 
+	                $('.result-item').each(function(index, item){
+	                	var hashs = $(item).attr('data-hashtags').split(",");
+	                	var foundAWrongHash = false;
+	                	$.each(hashtagsArray, function(i, v){
+	                		if($.inArray(v, hashs) == -1 || foundAWrongHash == true){
+	                			foundAWrongHash = true;
+	                		}
+	                	});
+	                	if (foundAWrongHash == false)
+	                		matches.push( item );
 	                });
 
 	                // add appropriate classes and call isotope.filter
 	                $matches = $(matches);
-
-	                if (matches.length == 0) {
-	                        $('#noMatches').show(); // deal with empty results set
-	                }
 	                
 	        } else {
 	                // show all if keyword less than 2 chars
 	                $matches = $(".result-item");
 	        }
 
-	        if($('#location').find('.locations').find('li.selected').length){
+	        if(locationsArray!=null && locationsArray.length){
 	          
 	          var secondMatch = [];
 
@@ -137,6 +168,10 @@ $(function(){
 
 	          $matches = $(secondMatch);
 
+	        }
+
+	        if(!$matches.length){
+	        	$('#noMatches').show();
 	        }
 
 	        paginate($matches);
@@ -212,26 +247,14 @@ $(function(){
 	      isotopeSearch();
 	});
 
-
-	// Locations
-	$('#location').on('click', function(e){
-	      var $t = $(this);
-	      $t.find('.locations').toggle();
-	      $t.toggleClass('selected');
-	      e.stopPropagation();
+	$('#nightclubs-list').on('change', function(e){
+		isotopeSearch();
+		e.preventDefault();
 	});
 
-	$(document).on('click', function(){
-	$('.locations').hide();
-	$('#location').removeClass('selected');
-	});
-
-	$('#location').find('.locations').find('li').on('click', function(e){
-	$(this).toggleClass('selected');
-	var nb = $('#location').find('.locations').find('li.selected').length;
-	$('#location').find('span').first().text((nb > 0) ? (nb + " Location" + ((nb > 1) ? "s" : "")) : "All locations");
-	isotopeSearch();
-	//e.stopPropagation();
+	$('#hashtags').on('change', function(e){
+		isotopeSearch();
+		e.preventDefault();
 	});
 
 	// First paginate
@@ -302,14 +325,27 @@ $(function() {
 
 /*-----------------------------------------------------------------------------------
 
+  Elastislide
+
+-----------------------------------------------------------------------------------*/
+
+$( '.carousel' ).elastislide( {
+    minItems : 4
+  } );
+
+/*-----------------------------------------------------------------------------------
+
   Feedback form reply target to iframe
 
 -----------------------------------------------------------------------------------*/
 
-function init() {
-	document.getElementById('feedbackfrm').onsubmit=function() {
-		document.getElementById('feedbackfrm').target = 'upload_target';
+if($('#feedbackfrm').length){
+
+	function init() {
+		document.getElementById('feedbackfrm').onsubmit=function() {
+			document.getElementById('feedbackfrm').target = 'upload_target';
+		};
 	};
-};
-window.onload=init;
+	window.onload=init;
+}
 
