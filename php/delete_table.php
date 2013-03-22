@@ -25,13 +25,15 @@
 	  
 	/* loop through and drop each table */
 	foreach($found_tables as $table_name){
-	  $sql = "DROP TABLE $table_name";
-	  if($result = mysql_query($sql)){
-		echo "Success - table $table_name deleted. <br>";
-	  }
-	  else{
-		echo "Error deleting $table_name. MySQL Error: " . mysql_error() . "<br>";
-	  }
+		if($table_name!=="signup"){
+		  $sql = "DROP TABLE $table_name";
+		  if($result = mysql_query($sql)){
+			echo "Success - table $table_name deleted. <br>";
+		  }
+		  else{
+			echo "Error deleting $table_name. MySQL Error: " . mysql_error() . "<br>";
+		  }
+		}
 	}
 		
 	echo "<br><a href='main.php'>home</a>";

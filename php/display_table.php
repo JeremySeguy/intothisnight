@@ -23,6 +23,16 @@
 		}		
 		echo "<br>";
 		
+		if ($tname == "club"){
+			$result2 = mysql_query("SELECT * FROM $tname");
+			$kount = mysql_num_rows($result2);
+			while($row = mysql_fetch_array($result2)){
+				echo "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ";
+			  	echo $row['name'] . ",&emsp;&emsp;" . $row['city'];
+			  	echo "<br />";
+		  	}
+		}
+		
 		if ($tname == "signup"){
 			$result2 = mysql_query("SELECT * FROM $tname");
 			$kount = mysql_num_rows($result2);

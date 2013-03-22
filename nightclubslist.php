@@ -1,3 +1,16 @@
+<?php
+	require "php/config.php";
+
+	$sql = "SELECT * FROM club WHERE city='San Francisco'";
+	$result = mysql_query($sql);
+	$num_fields = mysql_num_fields($result);
+	echo $num_fields . "<br>";
+	while($row = mysql_fetch_array($result)){
+		echo $row['name'] . ",&emsp;&emsp;" . $row['city'];
+		echo "<br />";
+	}
+?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
