@@ -29,7 +29,6 @@
 			name VARCHAR(30),
 			city VARCHAR(30),
 			address	VARCHAR(45),
-			googlemap	VARCHAR(90),
 			averagenight VARCHAR(30),
 			averagedrink VARCHAR(30),
 			averagecover VARCHAR(30),
