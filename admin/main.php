@@ -1,12 +1,23 @@
+<?php
+	session_start();
+	
+	if(!session_is_registered(email)){
+		header("location:admin.php");
+	}
+	
+	header("Cache-Control: no-cache, must-revalidate");
+	header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+?>
+
 <html>
     <head>
         <title>
         	Admin System
         </title>
     </head>
-    <body style="height: 3000px;">
-    	<span style="position: fixed; width: 800px; background: grey; opacity: 0.6; height: 400px; right: 10%; padding: 5px; border-radius: 10px;"></span>
-    	<div style="position: fixed; width: 800px; height: 400px; right: 10%;">
+    <body style="position: absolute; width: 1350px; height: 3000px;">
+    	<span style="position: fixed; width: 800px; height: 350px; left: 400px; background: grey; opacity: 0.6; border-radius: 10px;"></span>
+    	<div style="position: fixed; width: 800px; height: 350px; left: 400px; padding: 10px; ">
             <div style="opacity:1;">
             <h1>Admin System</h1>
             Clubs:
@@ -27,7 +38,9 @@
             Database:
             <a href="#displaydb">Display DB</a> |
             <a href="#deletedb">Delete DB</a> |
-            <a href="#createdb">Create DB</a> |    
+            <a href="#createdb">Create DB</a> |  
+            <br><br><br>
+            <h3>Logout: <a href="logout.php">Execute</a></h3>
             </div>  
         </div>
         <h3 id="newclub">Add New Club:</h3>

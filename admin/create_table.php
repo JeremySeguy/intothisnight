@@ -3,12 +3,15 @@
 	
 	if(!session_is_registered(email)){
 		header("location:index.php");
-	}*/
+	}
+	
+	header("Cache-Control: no-cache, must-revalidate");
+	header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");*/
 
 	require "config.php";
 		
 	//1.Create clubber table
-	$query=$query+mysql_query("
+	$query=mysql_query("
 		CREATE TABLE clubber (
 			 id_user int NOT NULL AUTO_INCREMENT,
 			 PRIMARY KEY(id_user),
@@ -21,7 +24,7 @@
 			 kindaccount VARCHAR(30)
 		 )") or $error="response:<br>" . mysql_error();
 			
-	//4.Create club table
+	//2.Create club table
 	$query=$query+mysql_query("
 		CREATE TABLE club(
 			id_club int NOT NULL AUTO_INCREMENT,
@@ -35,25 +38,34 @@
 			dresscode long
 		)") or $error=$error . "<br>" . mysql_error();
 	
-	//2.create signup table
+	//3.create signup table
 	$query=$query+mysql_query("
 		CREATE TABLE signup(
 			id_user int NOT NULL AUTO_INCREMENT,
 			PRIMARY KEY(id_user),
 			email VARCHAR(45),
 			date VARCHAR(45)
-		)") or die($error=$error . "<br>" . mysql_error() . "<br><br><a href='main.php'>home</a>");
+		)") or $error=$error . "<br>" . mysql_error();
 	
-	//3.create hash table
+	//4.create hash table
 	$query=$query+mysql_query("
 		CREATE TABLE hash(
 			id_user int NOT NULL AUTO_INCREMENT,
 			PRIMARY KEY(id_user),
 			hash VARCHAR(45),
 			date VARCHAR(45)
+		)") or $error=$error . "<br>" . mysql_error();
+		
+	//5.create admin table
+	$query=$query+mysql_query("
+		CREATE TABLE admin(
+			id_user int NOT NULL AUTO_INCREMENT,
+			PRIMARY KEY(id_user),
+			email VARCHAR(45),
+			password VARCHAR(255)
 		)") or die($error=$error . "<br>" . mysql_error() . "<br><br><a href='main.php'>home</a>");
 	
-	echo ($query/3)*100 . "% ";
+	echo ($query/4)*100 . "% "; //signup table is permanent
 	echo "Complete.";
 	
 	echo "<br><br><a href='main.php'>home</a>";
